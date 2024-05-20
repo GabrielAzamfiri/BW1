@@ -37,10 +37,12 @@
     font-weight: bolder;
     padding-top: 2em;
     font-size: 35px;
-    padding-bottom: 0.7em;
+    padding-bottom: 0.9em;
 }
 
-.textWP {
+.textWP,
+.liWP,
+#checkWP {
     color: white;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -50,8 +52,14 @@
     font-size: 16px;
 }
 
-#pWP {
-    line-height: 20px;
+.liWP {
+    line-height: 35px;
+    font-weight: 300;
+}
+
+.textWP {
+    line-height: 25px;
+    font-weight: 300;
 }
 
 main>.textWP {
@@ -66,7 +74,17 @@ ul {
     margin-left: 20px;
 }
 
-.liWP {
-    line-height: 35px;
-    ;
+.boldWP {
+    font-weight: 700;
+}
+
+
+
+#checkWP {
+    font-weight: 600;
+
+}
+
+#sectionCheckboxWP {
+    padding-top: 6em;
 }
