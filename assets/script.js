@@ -96,21 +96,21 @@ const questionResults = () => {
       risposta.classList.add("btnRisposta");
       risposta.innerText = risposte[index];
       contenitoreRisposte.appendChild(risposta);
-      console.log(risposta.innerText);
+
       risposta.addEventListener("click", () => {
-        if (this.innerText === questions[i].correct_answer) {
-          // risultato += 1; // se il testo del bottone è uguale alla risposta giusta aggiungi alla somma dei risultati}
-          console.log(risposte[index]);
+        // al click della risposta, se corretta aggiungi 1 al risultato altrimenti niente
+        if (risposta.innerText === questions[i].correct_answer) {
+          console.log("risposta giusta");
+          risultato += 1;
+          console.log("il risultato è:", risultato);
+        } else {
+          console.log("risposta sbagliata");
         }
+        i += 1;
+        contenitoreRisposte.innerHTML = "";
+        questionResults();
       });
     }
-  }
-
-  const bottoniRisposta = document.getElementsByClassName("btnRisposta");
-
-  i += 1;
-  for (let index = 0; index < bottoniRisposta.length; index++) {
-    console.log(bottoniRisposta[index]);
   }
 };
 
