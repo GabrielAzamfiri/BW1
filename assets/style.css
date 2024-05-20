@@ -42,7 +42,8 @@
 
 .textWP,
 .liWP,
-#checkWP {
+#checkWP,
+.textFB {
     color: white;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -111,16 +112,19 @@ ul {
 }
 
 #containerResults h1,
-#containerResults h3 {
+#containerResults h3,
+#h1Feedback {
     color: white;
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     color: white;
     line-height: 50px;
+    text-align: center;
 }
 
-#containerResults h1 {
+#containerResults h1,
+#h1Feedback {
     font-size: 60px;
     font-weight: 700;
 }
@@ -147,3 +151,23 @@ ul {
     width: 170px;
     font-size: 16px;
 }
+
+.textFB {
+    text-align: center;
+    padding-top: 40px;
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: 300;
+}
+
+.fa-star {
+    font-size: 50px;
+    color: #0f1751;
+}
+
+#ratingStars {
+    text-align: center;
+    padding-top: 40px;
+}
+
+#ratingStars {}
