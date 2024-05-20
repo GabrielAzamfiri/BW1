@@ -163,6 +163,7 @@ ul {
 .fa-star {
     font-size: 50px;
     color: #0f1751;
+    cursor: pointer;
 }
 
 #ratingStars {
@@ -170,4 +171,18 @@ ul {
     padding-top: 40px;
 }
 
-#ratingStars {}
+#ratingStars path.hover {
+    fill: #00FFFF;
+    cursor: pointer;
+}
+
+#ratingStars path.selected {
+    fill: #00FFFF;
+}
+
+.stella {
+    margin-right: 10px;
+}
+
+
+/* color: #00FFFF;*/
