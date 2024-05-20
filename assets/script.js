@@ -1,3 +1,6 @@
+
+
+
 // PAGINA FEEDBACK
 // stelle
 
@@ -81,3 +84,9 @@
         }
     }
 });
+const checkbox = document.getElementById("checkboxWP");
+const divButton = document.getElementById("buttonJs");
+
+
+
+
