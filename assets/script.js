@@ -1,9 +1,23 @@
+// WELCOME PAGE
+
+const checkbox = document.getElementById("checkboxWP");
+const divButton = document.getElementById("buttonJs");
+
+function check() {
+  if (checkbox.checked) {
+    const button = document.createElement("button");
+    button.textContent = "PROCEED";
+    button.classList.add("styleButton");
+
+    divButton.appendChild(button);
+  } else {
+    divButton.innerHTML = "";
+  }
+}
 
 
 
-// PAGINA FEEDBACK
-// stelle
-
+// FEEDBACK PAGE 
 
         document.addEventListener('DOMContentLoaded', function () {
         //DOMContentLoaded fa in modo che l'evento venga innescato quando il file html è "pronto"
@@ -40,7 +54,7 @@
     //seleziono i path creati all'interno della section #ratingStars
     const stars = document.querySelectorAll('#ratingStars path');
     
-    const selectedRating = 0; //0 perchè inizialmente nessuna stella è selezionata. 
+    let selectedRating = 0; //0 perchè inizialmente nessuna stella è selezionata. 
     // quando passo sopra una stella il valore di selectedRating viene aggiornato con l'indice della stella selezionata + 1.
     stars.forEach(function(star, index) {
         star.addEventListener('mouseover', function() {
@@ -50,7 +64,7 @@
         star.addEventListener('mouseout', handleMouseOut);// questa funzione viene chiamata quando il mouse esce da una stella e ripristina il colore delle stelle di deafult
         star.addEventListener('click', function() {
             handleClick(index);
-        }); // questa funzione viene chiamata quando una stella viene cliccata e si aggiorna il colore delle stelle selezionate fino a quella cliccata
+        }); // questa funzione viene chiamata quando una stella viene cliccata e si aggiorna lo stat
     });
 
     function handleMouseOver(index) {
@@ -74,7 +88,7 @@
                 star.classList.remove(className);
             }
         });
-    // verifico se la classe passata come parametro è "selected", che indica che siamo nella situazione in cui una stella è stata selezionata. faccio un forEach che itera su tutte le stelle. la condizione verifica ogni stella dopo l'indice della stella corrente. se i della stella è maggiore di i della stella selezionata  viene rimossa la classe "selected" dalla stella. 
+
         if (className === 'selected') {
             stars.forEach(function(star, i) {
                 if (i > index) {
@@ -84,9 +98,3 @@
         }
     }
 });
-const checkbox = document.getElementById("checkboxWP");
-const divButton = document.getElementById("buttonJs");
-
-
-
-

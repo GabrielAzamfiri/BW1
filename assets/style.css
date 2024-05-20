@@ -21,6 +21,7 @@
     font-style: normal;
     color: white;
     font-size: 60px;
+
 }
 
 #titoloWPBold {
@@ -32,7 +33,7 @@
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
-    color: #c70091;
+    color: #C70091;
     font-weight: bolder;
     padding-top: 2em;
     font-size: 35px;
@@ -47,7 +48,8 @@
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-variation-settings: "slnt" 0;
+    font-variation-settings:
+        "slnt" 0;
     font-size: 16px;
 }
 
@@ -160,5 +162,24 @@ ul {
 
 .fa-star {
     font-size: 50px;
-    color: gold;
+    color: #0f1751;
+    cursor: pointer;
+}
+
+#ratingStars {
+    text-align: center;
+    padding-top: 40px;
+}
+
+#ratingStars path.hover {
+    fill: #00FFFF;
+    cursor: pointer;
+}
+
+#ratingStars path.selected {
+    fill: #00FFFF;
+}
+
+.stella {
+    margin-right: 10px;
 }
