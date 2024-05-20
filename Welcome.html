@@ -4,10 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BW1 - Build Week 1</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
     <div class="background">
+      <div class="containerMargin">
       <header>
         <img
           src="assets/img/epicode_logo.png"
@@ -16,33 +27,40 @@
         />
       </header>
       <main>
-        <!--titolo-->
-        <h1 class="titoloWP">Welcome to</h1>
-        <h1 class="titoloWP"><strong>your page</strong></h1>
-        <h2 id="instructions">Instructions</h2>
-        <p class="textWP">
-          We don't expect most engineers to know the answers to all of these
-          questions, so don't worry if you're unsure of a few of them.
-        </p>
-        <!--unordered list-->
-        <ul>
-          <li class="textWP">
-            Each question is <strong>timed</strong>and can only be
-            <strong>answered once.</strong>
-          </li>
-          <li class="textWP">
-            Changing browser tab or opening other windows will
-            <strong>invalidate the question</strong>.
-          </li>
-          <li class="textWP">
-            This exam will take approx. <strong>0-5 minutes</strong>.
-          </li>
-        </ul>
-        <!--checkbox-->
-        <input type="checkbox" id="checkboxWP" required />
-        <span id="checkWP"
-          >I promise to answer myself without help from anyone</span
-        >
+          <!--titolo-->
+          <h1 class="titoloWP">Welcome to</h1>
+          <h1 class="titoloWP" id="titoloWPBold">your exam</h1>
+          <h2 id="instructions">Instructions</h2>
+          <div class="textWP">
+          <p>
+            We don't expect most engineers to know the answers to all of these <br>
+            questions, so don't worry if you're unsure of a few of them.
+          </p>
+          <!--unordered list-->
+          <div class="list">
+           <ul>
+            <li>
+              Each question is <strong>timed</strong>and can only be
+              <strong>answered once.</strong>
+            </li>
+            <li>
+              Changing browser tab or opening other windows will
+              <strong>invalidate the question</strong>.
+            </li>
+            <li>
+              This exam will take approx. <strong>0-5 minutes</strong>.
+            </li>
+          </ul> 
+          </div>
+          
+          </div>
+        
+          <!--checkbox-->
+          <input type="checkbox" id="checkboxWP" required />
+          <span id="checkWP"
+            >I promise to answer myself without help from anyone</span
+          >
+        </div>
       </main>
     </div>
   </body>
