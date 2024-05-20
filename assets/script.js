@@ -108,6 +108,7 @@ const questionResults = () => {
         }
         i += 1;
         contenitoreRisposte.innerHTML = "";
+        aggiornamentoCountdown();
         questionResults();
       });
     }
