@@ -104,6 +104,16 @@ ul {
   box-shadow: 0 0 20px rgba(1, 255, 255, 0.5);
 }
 
+.styleButtonUnchecked {
+  height: 5vh;
+  font-family: "Outfit", sans-serif;
+  font-size: large;
+  font-weight: bold;
+  margin-left: 100vh;
+  background-color: #999999;
+  color: #333333;
+}
+
 .containerQuestion {
   text-align: center;
 }

@@ -1,16 +1,22 @@
 const checkbox = document.getElementById("checkboxWP");
 const divButton = document.getElementById("buttonJs");
+const button = document.createElement("button");
+button.textContent = "PROCEED";
+button.classList.add("styleButtonUnchecked");
+divButton.appendChild(button);
 
 function check() {
-  if (checkbox.checked) {
-    const button = document.createElement("button");
-    button.textContent = "PROCEED";
-    button.classList.add("styleButton");
+  button.classList.remove("styleButton", "styleButtonUnchecked");
 
-    divButton.appendChild(button);
+  if (checkbox.checked) {
+    button.classList.add("styleButton");
   } else {
-    divButton.innerHTML = "";
+    button.classList.add("styleButtonUnchecked");
   }
 }
 
 checkbox.addEventListener("click", check);
+
+button.addEventListener(click, function () {
+  window.location.href = "Question.html";
+});
