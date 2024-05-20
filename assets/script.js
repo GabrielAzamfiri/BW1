@@ -16,3 +16,8 @@ function aggCountdown() {
 
 /* impostiamo l'intervallo di aggiornamento del timer */
 const intervalloCountdown = setInterval(aggCountdown, 1000);
+
+/* aggiunta la classe al mainConteiner per aggiungere animate */
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector(".mainContainer").classList.add("animate");
+});

@@ -2,13 +2,13 @@
 .mainContainer {
     width: 100%;
     height: 100vh;
-    background-color: orange;
+    background-color: violet;
 }
 
 .circleContainer {
     width: 400px;
     height: 400px;
-    background-color: white;
+    background-color: #00FFFF;
     border-radius: 50%;
     position: absolute;
     overflow: hidden;
@@ -22,42 +22,44 @@
     top: 0;
     left: 0;
     transform-origin: right center;
+    transform: rotate(0deg);
+    opacity: 1;
 }
 
 .semiCircle:nth-child(1) {
-    background-color: red;
+    background-color: grey;
     z-index: 2;
 }
 .semiCircle:nth-child(2) {
-    background-color: blue;
+    background-color: grey;
     z-index: 3;
     /* display: none; */
 }
 .semiCircle:nth-child(3) {
-    background-color: white;
+    background-color: #00FFFF;
     z-index: 4;
  
 }
 .outermostCircle {
-    width: 380px;
-    height: 380px;
-    background-color: black;
+    width: 360px;
+    height: 360px;
+    background-color: #702B73;
     border-radius: 50%;
     z-index: 5;
     position: absolute;
-    margin: 10px;
+    margin: 20px;
     /* display: none; */
 }
 
-.mainContainer:hover .semiCircle:nth-child(1) {
+.animate .semiCircle:nth-child(1) {
     transform: rotate(180deg);
-    transition: 1s linear;
+    transition: 10s linear;
 }
-.mainContainer:hover .semiCircle:nth-child(2) {
+.animate .semiCircle:nth-child(2) {
     transform: rotate(360deg);
-    transition: 2s linear;
+    transition: 20s linear;
 }
-.mainContainer:hover .semiCircle:nth-child(3) {
+.animate .semiCircle:nth-child(3) {
     opacity: 0;
-    transition: opacity 0s 1s;
+    transition: opacity 0s 10s;
 }
