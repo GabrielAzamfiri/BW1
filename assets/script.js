@@ -10,7 +10,7 @@ function aggiornamentoCountdown() {
   /* se scade il tempo  */
   if (tempoRimanente <= 0) {
     clearInterval(intervalloCountdown);
-    countdownElement.textContent = "tempo scaduto";
+    questionResults();
   }
 }
 
