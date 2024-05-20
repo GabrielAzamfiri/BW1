@@ -48,8 +48,10 @@
     font-variation-settings:
         "slnt" 0;
     font-size: 16px;
-    line-height: 25px;
-    line-height: 35px;
+}
+
+#pWP {
+    line-height: 20px;
 }
 
 main>.textWP {
@@ -62,4 +64,9 @@ main>.textWP {
 
 ul {
     margin-left: 20px;
+}
+
+.liWP {
+    line-height: 35px;
+    ;
 }
