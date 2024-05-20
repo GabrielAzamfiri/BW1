@@ -1,7 +1,7 @@
 /* timer countdown da 60 secondi  */
 let tempoRimanente = 60;
 const countdownElement = document.getElementById("countdown");
-
+/* funzione per aggiornare il countdown */
 function aggCountdown() {
   /* decrementa il tempo rimanente */
   tempoRimanente--;
