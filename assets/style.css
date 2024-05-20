@@ -1,72 +1,84 @@
 .background {
-    height: 100vh;
-    width: 100%;
-    background-image: url(img/bg.jpg);
-    background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-image: url(img/bg.jpg);
+  background-size: cover;
 }
 
 .logo {
-    width: 10em;
-    margin-top: 3em;
-    padding-bottom: 6em;
+  width: 10em;
+  margin-top: 3em;
+  padding-bottom: 6em;
 }
 
 .containerMargin {
-    margin-left: 7em;
+  margin-left: 7em;
 }
 
 .titoloWP {
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    color: white;
-    font-size: 60px;
-
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: white;
+  font-size: 60px;
 }
 
 #titoloWPBold {
-    font-weight: bolder;
+  font-weight: bolder;
 }
 
 #instructions {
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: normal;
-    color: #C70091;
-    font-weight: bolder;
-    padding-top: 2em;
-    font-size: 35px;
-    padding-bottom: 0.7em;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  color: #c70091;
+  font-weight: bolder;
+  padding-top: 2em;
+  font-size: 35px;
+  padding-bottom: 0.7em;
 }
 
 .textWP {
-    color: white;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings:
-        "slnt" 0;
-    font-size: 16px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  font-size: 16px;
 }
 
 #pWP {
-    line-height: 20px;
+  line-height: 20px;
 }
 
-main>.textWP {
-    padding-bottom: 2.5em;
+main > .textWP {
+  padding-bottom: 2.5em;
 }
 
 .list {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 ul {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .liWP {
-    line-height: 35px;
-    ;
+  line-height: 35px;
+}
+
+/*** BUTTON JS ***/
+.styleButton {
+  height: 5vh;
+  background-color: #01ffff;
+  color: #010032;
+  font-family: "Outfit", sans-serif;
+  font-size: large;
+  font-weight: bold;
+  margin-left: 100vh;
+}
+
+.styleButton:hover {
+  box-shadow: 0 0 20px rgba(1, 255, 255, 0.5);
 }
