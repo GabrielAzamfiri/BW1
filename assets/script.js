@@ -108,13 +108,13 @@ const questionResults = () => {
         }
         i += 1;
         contenitoreRisposte.innerHTML = "";
-        aggiornamentoCountdown();
-        questionResults();
+        aggiornamentoCountdown(); // al click fai rimaritre il timmer
+        questionResults(); //al click fai ripartire la funzione con i incrementato di 1
       });
     }
   }
 };
 
 window.onload = function () {
-  questionResults();
+  questionResults(); //chiamo la funzione cosi quando carica la pagina la prima domanda è gia pronta
 };
