@@ -105,3 +105,45 @@ ul {
 .answerBenchmark {
     font-size: 16px;
 }
+
+#containerResults {
+    text-align: center;
+}
+
+#containerResults h1,
+#containerResults h3 {
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+    line-height: 50px;
+}
+
+#containerResults h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+#containerResults h3 {
+    font-size: 30px;
+}
+
+.buttonFB {
+    background-color: transparent;
+    border-style: none;
+    box-sizing: border-box;
+    border: 2px solid white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+    font-weight: 600;
+    height: 50px;
+    line-height: 20px;
+    text-align: center;
+    width: 170px;
+    font-size: 16px;
+}
