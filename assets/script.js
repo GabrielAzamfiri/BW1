@@ -2,7 +2,7 @@
 let tempoRimanente = 60;
 const countdownElement = document.getElementById("countdown");
 /* funzione per aggiornare il countdown */
-function aggCountdown() {
+function aggiornamentoCountdown() {
   /* decrementa il tempo rimanente */
   tempoRimanente--;
   /* aggiorna il tempo */
@@ -15,9 +15,9 @@ function aggCountdown() {
 }
 
 /* impostiamo l'intervallo di aggiornamento del timer */
-const intervalloCountdown = setInterval(aggCountdown, 1000);
+const intervalloCountdown = setInterval(aggiornamentoCountdown, 1000);
 
 /* aggiunta la classe al mainConteiner per aggiungere animate */
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", function () {
   document.querySelector(".mainContainer").classList.add("animate");
 });

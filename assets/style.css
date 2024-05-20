@@ -23,7 +23,7 @@
     left: 0;
     transform-origin: right center;
     transform: rotate(0deg);
-    opacity: 1;
+    /* opacity: 1; */
 }
 
 .semiCircle:nth-child(1) {
@@ -48,18 +48,18 @@
     z-index: 5;
     position: absolute;
     margin: 20px;
-    /* display: none; */
+    display: none;
 }
 
 .animate .semiCircle:nth-child(1) {
     transform: rotate(180deg);
-    transition: 10s linear;
+    transition: transform 30s linear;
 }
 .animate .semiCircle:nth-child(2) {
     transform: rotate(360deg);
-    transition: 20s linear;
+    transition: transform 60s linear;
 }
 .animate .semiCircle:nth-child(3) {
     opacity: 0;
-    transition: opacity 0s 10s;
+    transition: opacity 0s 30s;
 }
