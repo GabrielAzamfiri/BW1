@@ -12,8 +12,7 @@ window.onload = function () {
         star.style.height=100;
         star.style.width=100;
         star.style.backgroundImage="url('../img/star.svg')";
-        starsArea.appendChild(star);
-        
+        starsArea.appendChild(star)
     }
 
 }
