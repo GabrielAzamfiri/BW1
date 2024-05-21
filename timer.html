@@ -10,7 +10,7 @@
   <body>
     <div id="time">
       <div class="circle">
-        <div class="dots secDot" style="--crl: #00ffff"></div>
+        <div class="dots secDot" style="--crl: grey"></div>
         <svg>
           <circle cx="70" cy="70" r="70"></circle>
           <circle cx="70" cy="70" r="70" id="ss"></circle>
@@ -38,12 +38,14 @@
         tempoRimanente--;
         /* aggiorna il tempo */
         countdownElement.textContent = tempoRimanente;
-        /* Calcola lo strokeDashoffset in base al tempo rimanente */
+        /* Calcolo lo strokeDashoffset in base al tempo rimanente */
         let percentualeCompletamento = (60 - tempoRimanente) / 60;
-        let strokeDashoffset = Math.floor(
-          lunghezzaCirconferenza * percentualeCompletamento
-        );
-        ss.style.strokeDashoffset = strokeDashoffset;
+        let strokeDashoffset =
+          lunghezzaCirconferenza * percentualeCompletamento;
+        ss.style.strokeDashoffset = Math.floor(strokeDashoffset);
+        /* Calcola l'angolo di rotazione per il puntino */
+        let angoloRotazione = percentualeCompletamento * 360;
+        secDot.style.transform = `rotate(${angoloRotazione}deg)`;
         /* se scade il tempo  */
         if (tempoRimanente <= 0) {
           clearInterval(intervalloCountdown);
@@ -52,6 +54,7 @@
       }
       /* impostiamo l'intervallo di aggiornamento del timer */
       const intervalloCountdown = setInterval(aggiornamentoCountdown, 1000);
+      /* la funzione questionResults() è gia stata stabilita da un collega */
     </script>
   </body>
 </html>
