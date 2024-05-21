@@ -97,12 +97,14 @@ let i = 0; //per cambiare index array questions al click
 let risultato = 0;
 const questionResults = () => {
   const domanda = document.getElementById("domanda");
+  if (i < questions.length) {
   const risposte = questions[i].correct_answer
     .concat("," + questions[i].incorrect_answers)
     .split(","); // array di risposte
 
   //creazione bottoni
-  if (i < questions.length) {
+  //
+    //console.log(questions[i])
     const questionNumber = document.getElementById("questionNumber");
     questionNumber.innerText = `QUESTION ${i + 1}/10`; //aggiorno il conteggio delle domande
     domanda.innerText = questions[i].question; //cambio il testo della domanda
@@ -141,8 +143,10 @@ const questionResults = () => {
       });
     }
   } else {
+    console.log("provaaaaaaaaaaaa")
     localStorage.setItem("risultato", risultato);
-    window.location.href = "../Results.html";
+    
+    window.location.href = "../../Results.html";
   }
 };
 
