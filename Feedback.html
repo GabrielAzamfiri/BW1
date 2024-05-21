@@ -23,8 +23,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="assets/style.css" />
-    <link rel="stylesheet" href="assets/reset.css" />
+    <link rel="stylesheet" href="/assets/CSS/reset.css" />
+    <link rel="stylesheet" href="/assets/CSS/style.css" />
   </head>
   <body>
     <div class="background">
@@ -48,9 +48,25 @@
       </section>
 
       <!--rating-->
-      <section id="ratingStars"></section>
+      <section id="sectionRating">
+        <div id="ratingStars"></div>
+        <div id="textFB">
+          Leave us an open feeedback about your experiences so far
+        </div>
+        <div id="containerBox">
+          <input
+            type="text"
+            class="commentFB"
+            placeholder="Write your comment here"
+            required
+          />
+        </div>
+        <a href="https://epicode.com/en/">
+          <button class="buttonFB">MORE INFO</button></a
+        >
+      </section>
     </div>
 
-    <script src="assets/script.js"></script>
+    <script src="/assets/JS/feedback.js"></script>
   </body>
 </html>

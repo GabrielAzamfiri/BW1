@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Question Page</title>
-    <link rel="stylesheet" href="reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -37,19 +36,16 @@
 
         <!--domanda-->
         <section>
-          <div class="questionBenchmark">domanda</div>
+          <div class="questionBenchmark" id="domanda">domanda</div>
         </section>
 
         <!--risposte-->
         <section>
-          <div class="answerBenchmark">risposta</div>
+          <div class="answerBenchmark" id="contenitoreRisposte">risposta</div>
         </section>
-        <div class="numeroDomanda"></div>
+        <div class="numeroDomanda" id="questionNumber"></div>
       </div>
     </div>
-    <div id="buttonQP">
-      <button>Varie risposte</button>
-    </div>
-    <script src="/assets/JS/script.js"></script>
+    <script src="assets/JS/question.js"></script>
   </body>
 </html>

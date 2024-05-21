@@ -1,8 +1,10 @@
 body {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-image: url(/assets/img/bg.jpg);
   background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 .logo {
   width: 10em;
@@ -88,27 +90,35 @@ ul {
   margin-top: -5vh;
 }
 
-/*** BUTTON JS WP ***/
-.styleButton {
-  height: 5vh;
-  background-color: #01ffff;
-  color: #010032;
-  font-family: "Outfit", sans-serif;
-  font-size: large;
-  font-weight: bold;
-  margin-left: 100vh;
-}
+/*** BUTTON JS ***/
 
+.styleButton,
 .styleButton:hover {
-  box-shadow: 0 0 20px rgba(1, 255, 255, 0.5);
+  background-color: #00ffff;
+  border-style: none;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 700;
+  height: 40px;
+  outline: none;
+  text-align: center;
+  margin-left: 25%;
+  margin-top: 50px;
+  box-shadow: 1px 1px 20px #00ffff;
 }
 
 .styleButtonUnchecked {
-  height: 5vh;
+  margin-top: 50px;
+  height: 40px;
   font-family: "Outfit", sans-serif;
-  font-size: large;
-  font-weight: bold;
-  margin-left: 100vh;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 25%;
   background-color: #999999;
   color: #333333;
 }
@@ -188,12 +198,6 @@ ul {
   font-weight: 300;
 }
 
-.fa-star {
-  font-size: 50px;
-  color: #0f1751;
-  cursor: pointer;
-}
-
 #ratingStars {
   text-align: center;
   padding-top: 40px;
@@ -210,4 +214,52 @@ ul {
 
 .stella {
   margin-right: 10px;
+}
+
+#textFB {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 4em;
+}
+
+#containerBox,
+#sectionRating {
+  text-align: center;
+}
+
+.commentFB {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  width: 500px;
+  margin-top: 4em;
+  border-bottom: 1px solid #c70091;
+  padding-bottom: 7px;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  outline: none;
+}
+
+.buttonFB {
+  background-color: #00ffff;
+  border-style: none;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 700;
+  height: 40px;
+  outline: none;
+  text-align: center;
+  box-shadow: 1px 1px 20px #00ffff;
+  margin-top: 7em;
 }
