@@ -88,6 +88,8 @@ const questionResults = () => {
 
   //creazione bottoni
   if (i < questions.length) {
+    const questionNumber = document.getElementById("questionNumber");
+    questionNumber.innerText = `QUESTION ${i + 1}/10`; //aggiorno il conteggio delle domande
     domanda.innerText = questions[i].question; //cambio il testo della domanda
     const numeriRandom = []; // array di numeri random da 0 al numero di risposte ( serve per mettere le riposte in ordine casuale)
 
@@ -115,6 +117,7 @@ const questionResults = () => {
           console.log("risposta sbagliata");
         }
         i += 1;
+
         contenitoreRisposte.innerHTML = "";
         // aggiornamentoCountdown(); // al click fai rimaritre il timmer
         questionResults(); //al click fai ripartire la funzione con i incrementato di 1
