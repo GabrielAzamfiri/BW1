@@ -126,20 +126,90 @@ const questionResults = () => {
           }
           i += 1;
           contenitoreRisposte.innerHTML = "";
+          sessionStorage.setItem("risultato",risultato)
           questionResults();
         });
+        console.log()
       }
     }
   } else {
+    localStorage.setItem("risultato",risultato)
     window.location.href = "../Results.html";
   }
 };
 
-const
+/*const chartData={
+  labels:["Correct","Wrong"],
+  data:[risultato*10, 100-(risultato*10)]
+  //data:[60,40]
+};
+
+const myChart= document.querySelector(".my-chart");
+console.log("sassss")
+
+new Chart(myChart, {
+  type: "doughnut",
+  data: {
+    labels: chartData.labels,
+    datasets: [
+      {
+        label: "Language Popularity",
+        data: chartData.data,
+      },
+    ],
+  },
+  options: {
+    borderWidth: 10,
+    borderRadius: 2,
+    hoverBorderWidth: 0,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  },
+});*/
+
+console.log(window.location.href.endsWith("Results.html"));
 
 window.onload = function () {
-  questionResults();
-  if (document.getElementById("url").innerHTML === "../Results.html") {
-    //
+  if (window.location.href.endsWith("Question.html")) {
+    questionResults();
   }
+
+  /*if (window.location.href.endsWith("Results.html")) {
+    console.log("File reults");
+    console.log(risultato);
+
+    const chartData = {
+      labels: ["Correct", "Wrong"],
+      data:[risultato*10, 100-(risultato*10)]
+      //data: [60, 40],
+    };
+
+    const myChart = document.querySelector(".my-chart");
+
+    new Chart(myChart, {
+      type: "doughnut",
+      data: {
+        labels: chartData.labels,
+        datasets: [
+          {
+            label: "Percentuale",
+            data: chartData.data,
+          },
+        ],
+      },
+      options: {
+        borderWidth: 10,
+        borderRadius: 2,
+        hoverBorderWidth: 0,
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+      },
+    });
+  }*/
 };
