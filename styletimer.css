@@ -39,23 +39,30 @@ body {
     stroke-dashoffset: 440;
 }
 /* testo timer */
-#time div {
+#time .seconds {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     color: white;
     font-weight: 500;
-    font-size: 1.5em;
+    font-size: 2em;
 }
-#time .timerSeconds {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-#time div .span {
-    font-size: 0.35em;
+
+#time .seconds .span {
+    font-size: 0.3em;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    margin-bottom: 3px; /* Aggiunge spazio sotto lo span */
+}
+
+#time .seconds #timerSeconds {
+    font-size: 2em;
+    margin: 5px 0; /* Aggiunge spazio sopra e sotto il numero */
 }
 
 /* puntino nel cerchio */
