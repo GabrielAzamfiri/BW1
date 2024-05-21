@@ -108,7 +108,7 @@ const questionResults = () => {
         }
         i += 1;
         contenitoreRisposte.innerHTML = "";
-        aggiornamentoCountdown(); // al click fai rimaritre il timmer
+        // aggiornamentoCountdown(); // al click fai rimaritre il timmer
         questionResults(); //al click fai ripartire la funzione con i incrementato di 1
       });
     }
