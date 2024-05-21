@@ -1,7 +1,7 @@
 
 const result= localStorage.getItem("risultato");
 
-console.log("File reults");
+console.log("File results");
 console.log(result);
 
 const chartData = {
