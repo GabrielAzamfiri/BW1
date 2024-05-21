@@ -1,8 +1,8 @@
-body {
-  height: 100%;
+.background {
+  height: 100vh;
   width: 100%;
-  background-image: url(/assets/img/bg.jpg);
-  background-size: 100%;
+  background-image: url(img/bg.jpg);
+  background-size: cover;
 }
 .logo {
   width: 10em;
@@ -189,9 +189,23 @@ ul {
 .fa-star {
   font-size: 50px;
   color: #0f1751;
+  cursor: pointer;
 }
 
 #ratingStars {
   text-align: center;
   padding-top: 40px;
+}
+
+#ratingStars path.hover {
+  fill: #00ffff;
+  cursor: pointer;
+}
+
+#ratingStars path.selected {
+  fill: #00ffff;
+}
+
+.stella {
+  margin-right: 10px;
 }
