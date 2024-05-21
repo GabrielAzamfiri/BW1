@@ -101,6 +101,7 @@ ul {
 
 .questionBenchmark {
     font-size: 60px;
+
 }
 
 .answerBenchmark {
@@ -160,11 +161,6 @@ ul {
     font-weight: 300;
 }
 
-.fa-star {
-    font-size: 50px;
-    color: #0f1751;
-    cursor: pointer;
-}
 
 #ratingStars {
     text-align: center;
@@ -182,4 +178,52 @@ ul {
 
 .stella {
     margin-right: 10px;
+}
+
+#textFB {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 4em;
+}
+
+#containerBox,
+#sectionRating {
+    text-align: center;
+}
+
+.commentFB {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    width: 500px;
+    margin-top: 4em;
+    border-bottom: 1px solid #C70091;
+    padding-bottom: 7px;
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    outline: none;
+}
+
+.buttonFB {
+    background-color: #00FFFF;
+    border-style: none;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 700;
+    height: 40px;
+    outline: none;
+    text-align: center;
+    box-shadow: 1px 1px 20px #00FFFF;
+    margin-top: 7em;
 }

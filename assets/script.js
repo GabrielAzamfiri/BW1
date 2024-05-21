@@ -105,3 +105,8 @@ function handleClick(starsElements, index) {
     selectedRating = index + 1;
     updateStars(starsElements, index, 'selected'); //starsElements, index e selected sono i parametri
 }
+
+
+
+
+
