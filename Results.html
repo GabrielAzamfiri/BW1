@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+
     <title>Document</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,11 +42,17 @@
         <h3>The summary of your answers:</h3>
         <div id="graficoRisposte"></div>
         <div id="correctAnswers"></div>
+        <div class="chart-container">
+          <canvas class="my-chart"></canvas>
+        </div>
         <div id="wrongAnswers"></div>
         <div id="containerButtonFB">
           <button class="buttonFB" role="button">SEND FEEDBACK</button>
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./assets/JS/result.js"></script>
+
   </body>
 </html>
