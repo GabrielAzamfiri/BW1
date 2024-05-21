@@ -80,10 +80,10 @@ ul {
     font-weight: 700;
 }
 
-#checkWP {
-    font-weight: 600;
-}
 
+#checkboxWP{
+    padding: 10rem;
+}
 #sectionCheckboxWP {
     padding-top: 6em;
 }
@@ -133,6 +133,7 @@ ul {
     border: 1px solid white;
     background-color: transparent;
     color: white;
+    cursor: not-allowed;
 }
 
 .containerQuestion {
