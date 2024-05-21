@@ -20,5 +20,3 @@ checkbox.addEventListener("click", check);
 button.addEventListener(click, function () {
   window.location.href = "Question.html";
 });
-
-const questionButton = document.getElementById("buttonQP");
