@@ -1,16 +1,15 @@
-
 body {
     box-sizing: border-box;
     background-color: rgb(240, 14, 14);
     display: flex;
     align-items: center;
-    
 }
 
 #time {
     display: flex;
 }
-/* stile dei cerchi */
+
+/* Stile dei cerchi */
 #time .circle {
     position: relative;
     width: 150px;
@@ -19,26 +18,34 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 #time .circle svg {
     position: relative;
     width: 150px;
     height: 150px;
     transform: rotate(270deg);
 }
+
 #time .circle svg circle {
     width: 100%;
     height: 100%;
     fill: transparent;
     stroke-width: 8;
-    stroke: #00ffff;
-    transform: translate(5px,5px);
+    transform: translate(5px, 5px);
 }
-#time .circle svg circle:nth-child(2) {
-    stroke: var(--crl);
+
+#time .circle svg circle.bg {
+    stroke: #00ffff; /* Colore di background */
+}
+
+#time .circle svg circle#progress {
+    stroke: #e0e0e0; /* Colore del cerchio animato */
     stroke-dasharray: 440;
     stroke-dashoffset: 440;
+    transition: stroke-dashoffset 1s linear; /* Aggiungi transizione */
 }
-/* testo timer */
+
+/* Testo timer */
 #time .seconds {
     position: absolute;
     top: 50%;
@@ -65,7 +72,7 @@ body {
     margin: 5px 0; /* Aggiunge spazio sopra e sotto il numero */
 }
 
-/* puntino nel cerchio */
+/* Puntino nel cerchio */
 #time .dots {
     position: absolute;
     width: 100%;
@@ -77,6 +84,7 @@ body {
     z-index: 1000;
     transform-origin: center;
 }
+
 #time .dots::before {
     content: "";
     position: absolute;
@@ -87,4 +95,3 @@ body {
     border-radius: 50%;
     box-shadow: 0 0 20px var(--crl), 0 0 60px var(--crl);
 }
-

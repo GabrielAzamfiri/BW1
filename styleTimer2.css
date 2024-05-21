@@ -8,32 +8,50 @@ body {
     position: relative;
     margin: auto;
     margin-top: 100px;
-    height: 40px;
-    width: 40px;
+    height: 100px; /* Dimensione del timer */
+    width: 100px;  /* Dimensione del timer */
     text-align: center;
   }
   
-  #countdown-number {
+  #countdown-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
-    display: inline-block;
-    line-height: 40px;
+  }
+  
+  #countdown-label-top,
+  #countdown-label-bottom {
+    font-size: 0.8em; /* Dimensione del testo delle etichette */
+  }
+  
+  #countdown-number {
+    font-size: 2em; /* Dimensione del numero */
+    line-height: 1em;
   }
   
   svg {
     position: absolute;
     top: 0;
     right: 0;
-    width: 40px;
-    height: 40px;
+    width: 100px;  /* Dimensione del cerchio */
+    height: 100px; /* Dimensione del cerchio */
     transform: rotateY(-180deg) rotateZ(-90deg);
   }
   
-  svg circle {
-    stroke-dasharray: 113px;
+  svg .bg-circle {
+    stroke: #555; /* Colore grigio per la barra di sfondo */
+    stroke-width: 8px;
+    fill: none;
+  }
+  
+  svg .progress-circle {
+    stroke-dasharray: 282px; /* Calcolato per un cerchio con raggio 45 */
     stroke-dashoffset: 0px;
     stroke-linecap: round;
-    stroke-width: 2px;
-    stroke: white;
+    stroke-width: 8px;
+    stroke: #00FFFF;
     fill: none;
     animation: countdown 60s linear infinite forwards;
   }
@@ -43,6 +61,7 @@ body {
       stroke-dashoffset: 0px;
     }
     to {
-      stroke-dashoffset: 113px;
+      stroke-dashoffset: 282px;
     }
   }
+  

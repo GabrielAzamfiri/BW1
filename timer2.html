@@ -8,9 +8,16 @@
   </head>
   <body>
     <div id="countdown">
-      <div id="countdown-number"></div>
+      <div id="countdown-text">
+        <div id="countdown-label-top">seconds</div>
+        <div id="countdown-number"></div>
+        <div id="countdown-label-bottom">remaining</div>
+      </div>
       <svg>
-        <circle r="18" cx="20" cy="20"></circle>
+        <circle class="bg-circle" r="45" cx="50" cy="50"></circle>
+        <!-- Cerchio di sfondo -->
+        <circle class="progress-circle" r="45" cx="50" cy="50"></circle>
+        <!-- Cerchio di progresso -->
       </svg>
     </div>
     <script src="./scriptTimer2.js"></script>

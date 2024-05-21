@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timer</title>
     <link rel="stylesheet" href="reset.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/LucaCuello/Circular-Countdown-Template@95af10a/css/countdown.css"
-    />
     <link rel="stylesheet" href="styletimer.css" />
   </head>
   <body>
@@ -16,8 +12,8 @@
       <div class="circle">
         <div class="dots secDot" style="--crl: grey"></div>
         <svg>
-          <circle cx="70" cy="70" r="70"></circle>
-          <circle cx="70" cy="70" r="70" id="ss"></circle>
+          <circle cx="70" cy="70" r="70" class="bg"></circle>
+          <circle cx="70" cy="70" r="70" id="progress"></circle>
         </svg>
         <div class="seconds">
           <span class="span">seconds</span>
@@ -26,40 +22,47 @@
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/gh/LucaCuello/Circular-Countdown-Template@95af10a/js/index.js"></script>
     <script>
-      let ss = document.getElementById("ss");
+      let progressCircle = document.getElementById("progress");
       let secDot = document.querySelector(".secDot");
 
-      /* funnzione per il timer */
+      /* Funzione per il timer */
       let tempoRimanente = 60;
       const countdownElement = document.getElementById("timerSeconds");
+
       /* Imposto lo strokeDasharray per il cerchio */
       const lunghezzaCirconferenza = 440; // Circonferenza del cerchio
-      ss.style.strokeDasharray = lunghezzaCirconferenza;
+      progressCircle.style.strokeDasharray = lunghezzaCirconferenza;
+      progressCircle.style.strokeDashoffset = lunghezzaCirconferenza;
 
       function aggiornamentoCountdown() {
-        /* decrementa il tempo rimanente */
+        /* Decrementa il tempo rimanente */
         tempoRimanente--;
-        /* aggiorna il tempo */
+
+        /* Aggiorna il tempo */
         countdownElement.textContent = tempoRimanente;
+
         /* Calcolo lo strokeDashoffset in base al tempo rimanente */
-        let percentualeCompletamento = (60 - tempoRimanente) / 60;
+        let percentualeCompletamento = tempoRimanente / 60;
         let strokeDashoffset =
           lunghezzaCirconferenza * percentualeCompletamento;
-        ss.style.strokeDashoffset = Math.floor(strokeDashoffset);
+        progressCircle.style.strokeDashoffset = strokeDashoffset;
+
         /* Calcola l'angolo di rotazione per il puntino */
-        let angoloRotazione = percentualeCompletamento * 360;
+        let angoloRotazione = (60 - tempoRimanente) * 6;
         secDot.style.transform = `rotate(${angoloRotazione}deg)`;
-        /* se scade il tempo  */
+
+        /* Se scade il tempo */
         if (tempoRimanente <= 0) {
           clearInterval(intervalloCountdown);
           questionResults();
         }
       }
-      /* impostiamo l'intervallo di aggiornamento del timer */
+
+      /* Impostiamo l'intervallo di aggiornamento del timer */
       const intervalloCountdown = setInterval(aggiornamentoCountdown, 1000);
-      /* la funzione questionResults() è gia stata stabilita da un collega */
+
+      /* La funzione questionResults() è già stata stabilita da un collega */
     </script>
   </body>
 </html>
