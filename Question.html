@@ -7,16 +7,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/assets/CSS/reset.css" />
     <link rel="stylesheet" href="/assets/CSS/style.css" />
   </head>
@@ -24,11 +18,7 @@
     <div class="background">
       <div class="containerMargin">
         <header>
-          <img
-            src="assets/img/epicode_logo.png"
-            alt="logo epicode"
-            class="logo"
-          />
+          <img src="assets/img/epicode_logo.png" alt="logo epicode" class="logo" />
         </header>
       </div>
 
@@ -40,15 +30,16 @@
 
         <!--domanda-->
         <section>
-          <div class="questionBenchmark">domanda</div>
+          <div class="questionBenchmark" id="domanda">domanda</div>
         </section>
 
         <!--risposte-->
         <section>
-          <div class="answerBenchmark">risposta</div>
+          <div class="answerBenchmark" id="contenitoreRisposte">risposta</div>
         </section>
-        <div class="numeroDomanda"></div>
+        <div class="numeroDomanda" id="questionNumber"></div>
       </div>
     </div>
+    <script src="assets/JS/question.js"></script>
   </body>
 </html>
