@@ -90,5 +90,48 @@ function handleClick(starsElements, index) {
 
 
 
+const buttonSend = document.querySelector('.buttonFB');
+buttonSend.addEventListener('click', function () {
+
+    let feedbackElement = document.getElementById("feedback_id");
+    let moreInfoElement = document.getElementById("moreInfo_id");
+    const resElement = document.getElementById("resFeedback");
+
+    if (feedbackElement && moreInfoElement) {
+      
+        setTextResultFeedback(selectedRating, feedbackElement);
+
+    } else {
+        feedbackElement = document.createElement("p");
+        feedbackElement.id = "feedback_id";
+        moreInfoElement = document.createElement("a");
+        moreInfoElement.id = "moreInfo_id";
+        moreInfoElement.href = "https://www.epicode.com";
+        moreInfoElement.innerText = "MORE INFO";
+        moreInfoElement.classList.add("infoFb")
+        setTextResultFeedback(selectedRating, feedbackElement);
+
+        resElement.appendChild(feedbackElement);
+        resElement.appendChild(moreInfoElement);
+    }
+
+    resElement.style.display = "block";
+});
+
+
+
+function setTextResultFeedback(selectedRating, feedbackElement) {
+    if (selectedRating >= 1 && selectedRating <= 5) {
+        feedbackElement.innerText = "I'm sorry. Let us know how we can improve...";
+    }
+    else if (selectedRating >= 6 && selectedRating <= 7) {
+        feedbackElement.innerText = "Thank you for your review.";
+     }
+     else {
+    feedbackElement.innerText = "Awesome! Hope to see you soon!";  
+    }
+}
+
+
 
 
