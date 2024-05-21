@@ -4,8 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timer</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styletimer.css" />
   </head>
   <body>
-    <div></div>
+    <div id="time">
+      <div class="circle">
+        <div class="dots secDot" style="--crl: #00ffff"></div>
+        <svg>
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle cx="70" cy="70" r="70" id="ss"></circle>
+        </svg>
+        <div class="seconds">
+          <span class="span">seconds</span><br />
+          <div id="timerSeconds">60</div>
+          <br /><span class="span">remaining</span>
+        </div>
+      </div>
+    </div>
+    <script>
+      let ss = document.getElementById("ss");
+      let secDot = document.querySelector(".secDot");
+
+      /* funnzione per il timer */
+      let tempoRimanente = 60;
+      const countdownElement = document.getElementById("timerSeconds");
+      /* Imposto lo strokeDasharray per il cerchio */
+      const lunghezzaCirconferenza = 440; // Circonferenza del cerchio
+      ss.style.strokeDasharray = lunghezzaCirconferenza;
+
+      function aggiornamentoCountdown() {
+        /* decrementa il tempo rimanente */
+        tempoRimanente--;
+        /* aggiorna il tempo */
+        countdownElement.textContent = tempoRimanente;
+        /* Calcola lo strokeDashoffset in base al tempo rimanente */
+        let percentualeCompletamento = (60 - tempoRimanente) / 60;
+        let strokeDashoffset = math.floor(
+          lunghezzaCirconferenza * percentualeCompletamento
+        );
+        ss.style.strokeDashoffset = strokeDashoffset;
+        /* se scade il tempo  */
+        if (tempoRimanente <= 0) {
+          clearInterval(intervalloCountdown);
+          questionResults();
+        }
+      }
+      /* impostiamo l'intervallo di aggiornamento del timer */
+      const intervalloCountdown = setInterval(aggiornamentoCountdown, 1000);
+    </script>
   </body>
 </html>
