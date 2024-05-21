@@ -40,7 +40,7 @@
         countdownElement.textContent = tempoRimanente;
         /* Calcola lo strokeDashoffset in base al tempo rimanente */
         let percentualeCompletamento = (60 - tempoRimanente) / 60;
-        let strokeDashoffset = math.floor(
+        let strokeDashoffset = Math.floor(
           lunghezzaCirconferenza * percentualeCompletamento
         );
         ss.style.strokeDashoffset = strokeDashoffset;
