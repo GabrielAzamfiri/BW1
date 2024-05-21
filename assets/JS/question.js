@@ -147,6 +147,17 @@ window.onload = function () {
   questionResults(); //chiamo la funzione cosi quando carica la pagina la prima domanda è gia pronta
 };
 
+/*** AL CLICK CAMBIO COLORE IN VIOLA */
+
+function changeColor() {
+  const button = document.getElementById("questionNumber");
+  button.classList.add("coloreViola");
+
+  setTimeout(function () {
+    button.classList.remove("coloreViola");
+  });
+}
+
 /** JS BUTTON WELCOME PAGE */
 
 const checkbox = document.getElementById("checkboxWP");

@@ -281,7 +281,7 @@ ul {
 }
 
 .btnRisposta {
-  background-color: transparent;
+  background-color: rgba(165, 165, 165, 0.315);
   color: white;
   font-family: "Inter", sans-serif;
   font-weight: 500;
@@ -291,4 +291,8 @@ ul {
   flex: 1 1 40%;
   max-width: 40%;
   margin: 5px;
+}
+
+.coloreViola {
+  color: #c70091;
 }
