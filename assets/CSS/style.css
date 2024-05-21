@@ -111,6 +111,7 @@ ul {
     height: 40px;
     outline: none;
     text-align: center;
+    padding: 0 3rem;
     margin-left: 25%;
     margin-top: 50px;
     box-shadow: 1px 1px 20px #00FFFF;
@@ -128,8 +129,10 @@ ul {
     font-size: 16px;
     font-weight: 700;
     margin-left: 25%;
-    background-color: #999999;
-    color: #333333;
+    padding: 0 3rem;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
 }
 
 .containerQuestion {
