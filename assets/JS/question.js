@@ -147,7 +147,7 @@ window.onload = function () {
   questionResults(); //chiamo la funzione cosi quando carica la pagina la prima domanda è gia pronta
 };
 
-/** JS BUTTON WP */
+/** JS BUTTON WELCOME PAGE */
 
 const checkbox = document.getElementById("checkboxWP");
 const divButton = document.getElementById("buttonJs");

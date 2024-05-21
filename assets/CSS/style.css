@@ -263,3 +263,32 @@ ul {
   box-shadow: 1px 1px 20px #00ffff;
   margin-top: 7em;
 }
+
+/*** QUESTION CSS ***/
+.numeroDomanda {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  margin-top: 15%;
+}
+
+#contenitoreRisposte {
+  margin-top: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btnRisposta {
+  background-color: transparent;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: large;
+  padding: 3vh;
+  border-radius: 10vh;
+  flex: 1 1 40%;
+  max-width: 40%;
+  margin: 5px;
+}
