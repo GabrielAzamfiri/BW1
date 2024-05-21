@@ -89,12 +89,20 @@ const questionResults = () => {
   //creazione bottoni
   if (i < questions.length) {
     domanda.innerText = questions[i].question; //cambio il testo della domanda
+    const numeriRandom = []; // array di numeri random da 0 al numero di risposte ( serve per mettere le riposte in ordine casuale)
+
     for (let index = 0; index < risposte.length; index++) {
-      //per ogni risposta
+      //per ogni numero dentro l'array (stessa quantità di risposte)
+      let randomNumber = 0;
+      do {
+        randomNumber = Math.floor(Math.random() * risposte.length);
+      } while (numeriRandom.includes(randomNumber));
+      numeriRandom.push(randomNumber);
+
       const contenitoreRisposte = document.getElementById("contenitoreRisposte");
       const risposta = document.createElement("button");
       risposta.classList.add("btnRisposta");
-      risposta.innerText = risposte[index];
+      risposta.innerText = risposte[numeriRandom[index]]; //come index un numero casuale cosi le riposte sono in ordine casuale
       contenitoreRisposte.appendChild(risposta);
 
       risposta.addEventListener("click", () => {
