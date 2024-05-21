@@ -93,27 +93,41 @@ ul {
 }
 
 /*** BUTTON JS ***/
-.styleButton {
-    height: 5vh;
-    background-color: #01ffff;
-    color: #010032;
-    font-family: "Outfit", sans-serif;
-    font-size: large;
-    font-weight: bold;
-    margin-left: 100vh;
+
+
+.styleButton,
+.styleButton:hover {
+    background-color: #00FFFF;
+    border-style: none;
+    box-sizing: border-box;
+    color: black;
     cursor: pointer;
+    font-family: "Outfit",
+        sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 700;
+    height: 40px;
+    outline: none;
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 50px;
+    box-shadow: 1px 1px 20px #00FFFF;
 }
 
 .styleButton:hover {
-    box-shadow: 0 0 20px rgba(1, 255, 255, 0.5);
+    background-color: #00FFFF;
+    box-shadow: 1px 1px 20px #00FFFF;
 }
 
 .styleButtonUnchecked {
-    height: 5vh;
+    margin-top: 50px;
+    height: 40px;
     font-family: "Outfit", sans-serif;
-    font-size: large;
-    font-weight: bold;
-    margin-left: 100vh;
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 25%;
     background-color: #999999;
     color: #333333;
 }
