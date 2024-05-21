@@ -2,7 +2,9 @@ body {
     height: 100%;
     width: 100%;
     background-image: url(/assets/img/bg.jpg);
-    background-size: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .logo {
@@ -99,6 +101,7 @@ ul {
     font-size: large;
     font-weight: bold;
     margin-left: 100vh;
+    cursor: pointer;
 }
 
 .styleButton:hover {
