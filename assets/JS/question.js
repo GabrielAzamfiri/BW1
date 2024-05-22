@@ -127,7 +127,6 @@ const questionResults = () => {
       });
     }
   } else {
-    console.log("provaaaaaaaaaaaa");
     localStorage.setItem("risultato", risultato);
 
     window.location.href = "../../Results.html";
