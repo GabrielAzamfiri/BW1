@@ -26,3 +26,8 @@ button.addEventListener("click", function () {
     window.location.href = "Question.html";
   }
 });
+
+lable.addEventListener("click", function () {
+  const faCheck = document.getElementById("fa-check");
+  faCheck.style.display = "block";
+});
