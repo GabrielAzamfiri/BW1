@@ -15,6 +15,7 @@ body {
 
 .containerMargin {
     margin-left: 7em;
+
 }
 
 .titoloWP {
@@ -451,4 +452,106 @@ label {
     font-style: normal;
     font-weight: 700;
     padding-bottom: 3em;
+    box-shadow: 1px 1px 20px #00FFFF;
+    margin-top: 7em;
+    margin-bottom: 7em;
 }
+.chart-container{
+    width: 38%;
+}
+
+
+.donut{
+    color: white;
+}
+
+.chartText {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    font-size: 0.3em;
+    -moz-transform: translateY(0.25em);
+    -ms-transform: translateY(0.25em);
+    -webkit-transform: translateY(0.25em);
+    transform: translateY(0.25em);
+  }
+
+.chartLabel {
+  font-size: 0.45em;
+  font-weight: 700;
+  fill: white;
+  line-height: 1;
+  text-anchor: middle;
+  -moz-transform: translateY(-3.6em);
+  -ms-transform: translateY(-3.6em);
+  -webkit-transform: translateY(-3.6em);
+  transform: translateY(-3.6em);
+}
+
+.chartLabel2 {
+  font-size: 0.45em;
+  font-weight: 700;
+  line-height: 1;
+  fill: #00FFFF;
+  text-anchor: middle;
+  -moz-transform: translateY(-2.4em);
+  -ms-transform: translateY(-2.4em);
+  -webkit-transform: translateY(-2.4em);
+  transform: translateY(-2.4em);
+}
+.chartLabel3 {
+    font-size: 0.30em;
+    font-family: "Inter", sans-serif;
+    fill: white;
+    font-weight: 200;
+    text-anchor: middle;
+    -moz-transform: translateY(-1.2em);
+    -ms-transform: translateY(-1.2em);
+    -webkit-transform: translateY(-1.2em);
+    transform: translateY(-1.2em);
+  }
+
+  #mainResult{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  #correctAnswers{
+    padding-top: 15vh;
+  }
+  #wrongAnswers{
+    padding-top: 15vh;
+  }
+  .resultLabelTitle{
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 4.8rem;
+  }
+  .resultLabelPercentage{
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 5rem;
+    font-weight: 700;
+    text-align: left;
+  }
+  
+  .resultLabelFraction{
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-align: left;
+  }
+  .alignRight{
+    text-align: right;
+  }
