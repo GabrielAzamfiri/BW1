@@ -1,12 +1,21 @@
 body {
     box-sizing: border-box;
     background-color: rgb(240, 14, 14);
-    display: flex;
-    align-items: center;
+    margin: 0;
+    height: 100vh;
+   display: block;
+   position: relative;
 }
 
 #time {
-    display: flex;
+    position: absolute; /* consente di posizionarlo esattamente dentro l'elemento padre */
+    /*  top e left servono per modificare la posizione dei bordi superiori e sinistro in modo da centratli al centro */
+    top: 50%;
+    left: 50%;
+    /* con la propietà trasform: traslate andiamo a centrare il contenuto giocando sull'asse orizontale e verticale, in questo caso a meta della sua larghezza e altezza. */
+    transform: translate(-50%,-50%);
+    width: 150px;
+    height: 150px;
 }
 
 /* Stile dei cerchi */
@@ -14,13 +23,12 @@ body {
     position: relative;
     width: 150px;
     height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #time .circle svg {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 150px;
     height: 150px;
     transform: rotate(270deg);
@@ -35,14 +43,17 @@ body {
 }
 
 #time .circle svg circle.bg {
-    stroke: #00ffff; /* Colore di background */
+/* Colore di background */
+    stroke: #00ffff; 
 }
 
 #time .circle svg circle#progress {
-    stroke: #e0e0e0; /* Colore del cerchio animato */
+/* Colore del cerchio animato */
+    stroke: #e0e0e0; 
     stroke-dasharray: 440;
     stroke-dashoffset: 440;
-    transition: stroke-dashoffset 1s linear; /* Aggiungi transizione */
+    /* Aggiungo transizione */
+    transition: stroke-dashoffset 1s linear; 
 }
 
 /* Testo timer */
@@ -51,37 +62,33 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     color: white;
     font-weight: 500;
     font-size: 2em;
+    text-align: center;
 }
 
 #time .seconds .span {
     font-size: 0.3em;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    margin-bottom: 3px; /* Aggiunge spazio sotto lo span */
+    margin-bottom: 3px; 
 }
 
 #time .seconds #timerSeconds {
-    font-size: 2em;
-    margin: 5px 0; /* Aggiunge spazio sopra e sotto il numero */
+    font-size: 1.8em;
+    margin: 0;
 }
 
 /* Puntino nel cerchio */
 #time .dots {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    z-index: 1000;
+    /* z-index: 1000; */
     transform-origin: center;
 }
 
@@ -89,6 +96,8 @@ body {
     content: "";
     position: absolute;
     top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 15px;
     height: 15px;
     background: var(--crl);
