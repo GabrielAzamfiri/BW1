@@ -80,6 +80,8 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
+
+//*******************************************************************FUNZIONE DOMANDE*************************************************************************** */
 let i = 0; //per cambiare index array questions al click
 let risultato = 0;
 const questionResults = () => {
@@ -87,9 +89,6 @@ const questionResults = () => {
   if (i < questions.length) {
     const risposte = questions[i].correct_answer.concat("," + questions[i].incorrect_answers).split(","); // array di risposte
 
-    //creazione bottoni
-    //
-    //console.log(questions[i])
     const questionNumber = document.getElementById("questionNumber");
     questionNumber.innerText = `QUESTION ${i + 1}/10`; //aggiorno il conteggio delle domande
     domanda.innerText = questions[i].question; //cambio il testo della domanda
@@ -110,9 +109,9 @@ const questionResults = () => {
       contenitoreRisposte.appendChild(risposta);
 
       risposta.addEventListener("click", () => {
-        // al click della risposta, se corretta aggiungi 1 al risultato altrimenti niente
         if (risposta.innerText === questions[i].correct_answer) {
           console.log("risposta giusta");
+          // al click della risposta, se corretta aggiungi 1 al risultato altrimenti niente
           risultato += 1;
           console.log("il risultato è:", risultato);
         } else {
@@ -121,19 +120,18 @@ const questionResults = () => {
         i += 1;
         tempoRimanente = 10;
         contenitoreRisposte.innerHTML = "";
-        // aggiornamentoCountdown(); // al click fai rimaritre il timmer
         questionResults(); //al click fai ripartire la funzione con i incrementato di 1
-        aggiornamentoCountdown();
+        aggiornamentoCountdown(); // al click fai rimaritre il timmer
       });
     }
   } else {
-    localStorage.setItem("risultato", risultato);
-
+    localStorage.setItem("risultato", risultato); // PER PRENDERE IL VALORE DEL RISULTATO NELLA PAGINA SUCCESSIVA
     window.location.href = "../../Results.html";
   }
 };
 
 window.onload = function () {
+  //FAI PARTIRE LA FUNZIONE QUANDO LA PAGINA è CARICATA
   if (window.location.href.endsWith("Question.html")) {
     questionResults(); //chiamo la funzione cosi quando carica la pagina la prima domanda è gia pronta
   }
