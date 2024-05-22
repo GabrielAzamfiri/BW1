@@ -27,6 +27,25 @@ button.addEventListener("click", function () {
   }
 });
 
-lable.addEventListener("click", function () {
-  document.getElementById("divCheckbox").style.backgroundColor = "white";
+
+// COLORE CHECKBOX AL CLICK
+
+document.addEventListener("DOMContentLoaded", function() {
+  const label = document.getElementById("labelWP");
+  const checkbox = document.getElementById("divCheckbox");
+
+  label.addEventListener("click", function () {
+
+    if (checkbox.classList.contains("clicked")) // controlla se il #divCheckbox ha la classe ".clicked" (background colorato)
+      checkbox.classList.remove("clicked"); // se la classe .clicked è presente viene rimossa
+    else
+      checkbox.classList.add("clicked"); // se la classe .clicked non è presente viene aggiunta
+        
+    });
+
 });
+
+
+// CHECK
+
+    
