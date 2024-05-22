@@ -15,7 +15,9 @@ body {
 }
 
 .containerMargin {
-  margin-left: 7em;
+  width: 1200px;
+  height: 100vh;
+  margin: auto;
 }
 
 .titoloWP {
