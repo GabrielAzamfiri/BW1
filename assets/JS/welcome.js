@@ -28,6 +28,5 @@ button.addEventListener("click", function () {
 });
 
 lable.addEventListener("click", function () {
-  const faCheck = document.getElementById("fa-check");
-  faCheck.style.display = "block";
+  document.getElementById("divCheckbox").style.backgroundColor = "white";
 });
