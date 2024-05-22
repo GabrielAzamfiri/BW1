@@ -27,6 +27,7 @@ button.addEventListener("click", function () {
   }
 });
 
+
 // COLORE CHECKBOX AL CLICK
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -35,13 +36,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const checkIcon = document.getElementById("checkIcon");
 
   label.addEventListener("click", function () {
+
     // controlla se il #divCheckbox ha la classe ".clicked" (background colorato)
     if (checkbox.classList.contains("clicked")) {
       checkbox.classList.remove("clicked"); // se la classe .clicked è presente viene rimossa e la icon non si vedrà
       checkIcon.style.display = "none";
-    } else {
+    }
+    else {
       checkbox.classList.add("clicked"); // se la classe .clicked non è presente viene aggiunta e compare la icon
       checkIcon.style.display = "block";
-    }
+    }   
   });
 });
+  
+  
+
+    
