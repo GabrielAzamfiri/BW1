@@ -136,7 +136,7 @@ const questionResults = () => {
           console.log("risposta sbagliata");
         }
         i += 1;
-        tempoRimanente = 60;
+        tempoRimanente = 61;
         contenitoreRisposte.innerHTML = "";
         // aggiornamentoCountdown(); // al click fai rimaritre il timmer
         questionResults(); //al click fai ripartire la funzione con i incrementato di 1
@@ -177,10 +177,15 @@ function aggiornamentoCountdown() {
   /* Aggiorna il tempo */
   countdownElement.textContent = tempoRimanente;
 
+  /* Calcolo lo strokeDasharray in base al tempo rimanente */
+  let percentualeCompletamento = (60 - tempoRimanente) / 60;
+  let lunghezzaVisibile = lunghezzaCirconferenza * percentualeCompletamento;
+  let lunghezzaInvisibile = lunghezzaCirconferenza - lunghezzaVisibile;
+  progressCircle.style.strokeDasharray = `${lunghezzaVisibile} ${lunghezzaInvisibile}`;
   /* Calcolo lo strokeDashoffset in base al tempo rimanente */
-  let percentualeCompletamento = tempoRimanente / 60;
+  /*   let percentualeCompletamento = tempoRimanente / 60;
   let strokeDashoffset = lunghezzaCirconferenza * percentualeCompletamento;
-  progressCircle.style.strokeDashoffset = strokeDashoffset;
+  progressCircle.style.strokeDashoffset = strokeDashoffset; */
 
   /* Calcola l'angolo di rotazione per il puntino */ /* DA FARE SE AVANZA TEMPO */
   /*  let angoloRotazione = (60 - tempoRimanente) * 6;
@@ -188,7 +193,7 @@ function aggiornamentoCountdown() {
 
   /* Se scade il tempo */
   if (tempoRimanente <= 0) {
-    tempoRimanente = 60;
+    tempoRimanente = 61;
     i += 1;
     const contenitoreRisposte = document.getElementById("contenitoreRisposte");
     contenitoreRisposte.innerHTML = "";
