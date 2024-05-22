@@ -2,20 +2,23 @@ body {
   height: 100%;
   width: 100%;
   background-image: url(/assets/img/bg.jpg);
+  background-position: center;
   background-size: cover;
-  background-attachment: fixed;
   background-repeat: no-repeat;
+  margin: ;
 }
 
 .logo {
   width: 10em;
   margin-top: 3em;
-  padding-bottom: 6em;
+  padding-bottom: 5em;
 }
 
 .containerMargin {
-  width: 70%;
+  width: 1000px;
+  height: 100vh;
   margin: auto;
+
   /* margin-left: 7em; */
 }
 
@@ -38,9 +41,9 @@ body {
   font-style: normal;
   color: #c70091;
   font-weight: bolder;
-  padding-top: 2em;
+  padding-top: 1em;
   font-size: 35px;
-  padding-bottom: 0.9em;
+  padding-bottom: 0.5em;
 }
 
 #checkboxWP:checked {
@@ -69,7 +72,7 @@ body {
 }
 
 .textWP {
-  line-height: 25px;
+  line-height: 20px;
   font-weight: 300;
 }
 
@@ -96,14 +99,13 @@ label {
 #divCheckbox {
   display: inline-block;
   border: 1px solid white;
-
   width: 1rem;
   height: 1rem;
+  transform: translateY(20%);
 }
 
 #checkboxWP {
   display: none;
-  /* padding: 10rem; */
 }
 #checkWP {
   font-weight: 600;
