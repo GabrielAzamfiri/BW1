@@ -89,364 +89,366 @@ ul {
 
 #checkWP {
     font-weight: 600;
+}
 
-    label {
-        margin-right: 1rem;
-    }
-
-    #divCheckbox {
-        display: inline-block;
-        border: 2.5px solid white;
-        width: 13px;
-        height: 13px;
-        display: flex;
-        margin-right: 10px;
-        cursor: pointer;
-        justify-content: center;
-        align-items: center;
-    }
+label {
+    margin-right: 1rem;
+}
 
 
-    .fa-check {
-        color: white;
-        font-size: 10px;
-        display: none;
-    }
+#divCheckbox {
+    display: inline-block;
+    border: 2.5px solid white;
+    width: 13px;
+    height: 13px;
+    display: flex;
+    margin-right: 10px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
 
 
-    #checkboxWP {
-        display: none;
-        /* padding: 10rem; */
-    }
+.fa-check {
+    color: white;
+    font-size: 10px;
+    display: none;
+}
 
-    #sectionCheckboxWP {
-        padding-top: 6em;
-    }
 
-    #sectionCheckboxWP {
-        margin-top: -5vh;
-    }
+#checkboxWP {
+    display: none;
+    /* padding: 10rem; */
+}
 
-    /* ***************************************TIMER*********************************** */
-    #time {
-        position: absolute;
-        /* consente di posizionarlo esattamente dentro l'elemento padre */
-        /*  top e left servono per modificare la posizione dei bordi superiori e sinistro in modo da centratli al centro */
-        top: 20%;
-        left: 80%;
-        /* con la propietà trasform: traslate andiamo a centrare il contenuto giocando sull'asse orizontale e verticale, in questo caso a meta della sua larghezza e altezza. */
-        transform: translate(-50%, -50%);
-        width: 150px;
-        height: 150px;
-    }
+#sectionCheckboxWP {
+    padding-top: 6em;
+}
 
-    /* Stile dei cerchi */
-    #time .circle {
-        position: relative;
-        width: 150px;
-        height: 150px;
-    }
+#sectionCheckboxWP {
+    margin-top: -5vh;
+}
 
-    #time .circle svg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 150px;
-        height: 150px;
-        transform: rotate(270deg);
-    }
+/* ***************************************TIMER*********************************** */
+#time {
+    position: absolute;
+    /* consente di posizionarlo esattamente dentro l'elemento padre */
+    /*  top e left servono per modificare la posizione dei bordi superiori e sinistro in modo da centratli al centro */
+    top: 20%;
+    left: 80%;
+    /* con la propietà trasform: traslate andiamo a centrare il contenuto giocando sull'asse orizontale e verticale, in questo caso a meta della sua larghezza e altezza. */
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+}
 
-    #time .circle svg circle {
-        width: 100%;
-        height: 100%;
-        fill: transparent;
-        stroke-width: 8;
-        transform: translate(5px, 5px);
-    }
+/* Stile dei cerchi */
+#time .circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
 
-    #time .circle svg circle.bg {
-        /* Colore di background */
-        stroke: #00ffff;
-    }
+#time .circle svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
 
-    #time .circle svg circle#progress {
-        /* Colore del cerchio animato */
-        stroke: #e0e0e0;
-        stroke-dasharray: 440;
-        stroke-dashoffset: 440;
-        /* Aggiungo transizione */
-        transition: stroke-dashoffset 1s linear;
-    }
+#time .circle svg circle {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 8;
+    transform: translate(5px, 5px);
+}
 
-    /* Testo timer */
-    #time .seconds {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-weight: 500;
-        font-size: 2em;
-        text-align: center;
-    }
+#time .circle svg circle.bg {
+    /* Colore di background */
+    stroke: #00ffff;
+}
 
-    #time .seconds .span {
-        font-size: 0.3em;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        margin-bottom: 3px;
-    }
+#time .circle svg circle#progress {
+    /* Colore del cerchio animato */
+    stroke: #e0e0e0;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    /* Aggiungo transizione */
+    transition: stroke-dashoffset 1s linear;
+}
 
-    #time .seconds #timerSeconds {
-        font-size: 1.8em;
-        margin: 0;
-    }
+/* Testo timer */
+#time .seconds {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: 500;
+    font-size: 2em;
+    text-align: center;
+}
 
-    /* Puntino nel cerchio */
-    #time .dots {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        transform-origin: center;
-    }
+#time .seconds .span {
+    font-size: 0.3em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
 
-    #time .dots::before {
-        content: "";
-        position: absolute;
-        top: -3px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 15px;
-        height: 15px;
-        background: var(--crl);
-        border-radius: 50%;
-        box-shadow: 0 0 20px var(--crl), 0 0 60px var(--crl);
-    }
+#time .seconds #timerSeconds {
+    font-size: 1.8em;
+    margin: 0;
+}
 
-    /*** BUTTON JS ***/
+/* Puntino nel cerchio */
+#time .dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform-origin: center;
+}
 
-    .styleButton,
-    .styleButton:hover {
-        background-color: #00ffff;
-        border-style: none;
-        box-sizing: border-box;
-        color: black;
-        cursor: pointer;
-        font-family: "Outfit", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        font-size: 16px;
-        font-weight: 700;
-        height: 40px;
-        outline: none;
-        text-align: center;
-        padding: 0 3rem;
-        margin-left: 25%;
-        margin-top: 50px;
-        box-shadow: 1px 1px 20px #00ffff;
-    }
+#time .dots::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background: var(--crl);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--crl), 0 0 60px var(--crl);
+}
 
-    .styleButtonUnchecked {
-        margin-top: 50px;
-        height: 40px;
-        font-family: "Outfit", sans-serif;
-        font-size: 16px;
-        font-weight: 700;
-        margin-left: 25%;
-        padding: 0 3rem;
-        border: 1px solid white;
-        background-color: transparent;
-        color: white;
-        cursor: not-allowed;
-    }
+/*** BUTTON JS ***/
 
-    .containerQuestion {
-        text-align: center;
-    }
+.styleButton,
+.styleButton:hover {
+    background-color: #00ffff;
+    border-style: none;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 700;
+    height: 40px;
+    outline: none;
+    text-align: center;
+    padding: 0 3rem;
+    margin-left: 25%;
+    margin-top: 50px;
+    box-shadow: 1px 1px 20px #00ffff;
+}
 
-    .questionBenchmark,
-    .answerBenchmark {
-        font-family: "Outfit", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        color: white;
-    }
+.styleButtonUnchecked {
+    margin-top: 50px;
+    height: 40px;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 25%;
+    padding: 0 3rem;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: not-allowed;
+}
 
-    .questionBenchmark {
-        font-size: 60px;
-    }
+.containerQuestion {
+    text-align: center;
+}
 
-    .answerBenchmark {
-        font-size: 16px;
-    }
+.questionBenchmark,
+.answerBenchmark {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+}
 
-    #containerResults {
-        text-align: center;
-    }
+.questionBenchmark {
+    font-size: 60px;
+}
 
-    #labelWP {
-        display: flex;
-        align-items: center;
+.answerBenchmark {
+    font-size: 16px;
+}
 
-    }
+#containerResults {
+    text-align: center;
+}
 
-    #containerResults h1,
-    #containerResults h3,
-    #h1Feedback {
-        color: white;
-        font-family: "Outfit", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        color: white;
-        line-height: 50px;
-        text-align: center;
-    }
+#labelWP {
+    display: flex;
+    align-items: center;
 
-    #containerResults h1,
-    #h1Feedback {
-        font-size: 60px;
-        font-weight: 700;
-    }
+}
 
-    #containerResults h3 {
-        font-size: 30px;
-    }
+#containerResults h1,
+#containerResults h3,
+#h1Feedback {
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+    line-height: 50px;
+    text-align: center;
+}
 
-    .buttonFB {
-        background-color: transparent;
-        border-style: none;
-        box-sizing: border-box;
-        border: 2px solid white;
-        cursor: pointer;
-        display: inline-block;
-        font-family: "Outfit", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        color: white;
-        font-weight: 600;
-        height: 50px;
-        line-height: 20px;
-        text-align: center;
-        width: 170px;
-        font-size: 16px;
-    }
+#containerResults h1,
+#h1Feedback {
+    font-size: 60px;
+    font-weight: 700;
+}
 
-    .textFB {
-        text-align: center;
-        padding-top: 40px;
-        font-size: 25px;
-        line-height: 40px;
-        font-weight: 300;
-    }
+#containerResults h3 {
+    font-size: 30px;
+}
 
-    #ratingStars {
-        text-align: center;
-        padding-top: 40px;
-    }
+.buttonFB {
+    background-color: transparent;
+    border-style: none;
+    box-sizing: border-box;
+    border: 2px solid white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+    font-weight: 600;
+    height: 50px;
+    line-height: 20px;
+    text-align: center;
+    width: 170px;
+    font-size: 16px;
+}
 
-    #ratingStars path.hover {
-        fill: #00ffff;
-        cursor: pointer;
-    }
+.textFB {
+    text-align: center;
+    padding-top: 40px;
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: 300;
+}
 
-    #ratingStars path.selected {
-        fill: #00ffff;
-    }
+#ratingStars {
+    text-align: center;
+    padding-top: 40px;
+}
 
-    .stella {
-        margin-right: 10px;
-    }
+#ratingStars path.hover {
+    fill: #00ffff;
+    cursor: pointer;
+}
 
-    #textFB {
-        font-family: "Outfit", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        color: white;
-        font-size: 20px;
-        text-align: center;
-        padding-top: 4em;
-    }
+#ratingStars path.selected {
+    fill: #00ffff;
+}
 
-    #containerBox,
-    #sectionRating {
-        text-align: center;
-    }
+.stella {
+    margin-right: 10px;
+}
 
-    .commentFB {
-        background-color: transparent;
-        border: none;
-        font-size: 16px;
-        width: 500px;
-        margin-top: 4em;
-        border-bottom: 1px solid #c70091;
-        padding-bottom: 7px;
-        color: white;
-        font-family: "Outfit", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        outline: none;
-    }
+#textFB {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 4em;
+}
 
-    .buttonFB {
-        background-color: #00ffff;
-        border-style: none;
-        box-sizing: border-box;
-        color: black;
-        cursor: pointer;
-        font-family: "Outfit", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        font-size: 16px;
-        font-weight: 700;
-        height: 40px;
-        outline: none;
-        text-align: center;
-        box-shadow: 1px 1px 20px #00ffff;
-        margin-top: 60px;
-    }
+#containerBox,
+#sectionRating {
+    text-align: center;
+}
 
-    #resFeedback {
-        display: none;
-        font-family: "Outfit", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        color: white;
-        font-size: 20px;
-        text-align: center;
-        margin-top: 9em;
-    }
+.commentFB {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    width: 500px;
+    margin-top: 4em;
+    border-bottom: 1px solid #c70091;
+    padding-bottom: 7px;
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    outline: none;
+}
 
-    #resFeedback a {
-        display: inline-block;
-        margin-top: 40px;
-        background-color: #00ffff;
-        border-style: none;
-        box-sizing: border-box;
-        color: black;
-        cursor: pointer;
-        font-family: "Outfit", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        font-weight: 700;
-        height: 40px;
-        width: 170px;
-        outline: none;
-        text-align: center;
-        box-shadow: 1px 1px 20px #00ffff;
-        text-align: unset;
-        padding: 12px;
-        text-decoration: none;
-        font-size: 16px;
-    }
+.buttonFB {
+    background-color: #00ffff;
+    border-style: none;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 700;
+    height: 40px;
+    outline: none;
+    text-align: center;
+    box-shadow: 1px 1px 20px #00ffff;
+    margin-top: 60px;
+}
 
-    #feedbackId {
-        font-size: 35px;
-        font-family: "Outfit", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        font-weight: 700;
-        padding-bottom: 3em;
-    }
+#resFeedback {
+    display: none;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 9em;
+}
+
+#resFeedback a {
+    display: inline-block;
+    margin-top: 40px;
+    background-color: #00ffff;
+    border-style: none;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 700;
+    height: 40px;
+    width: 170px;
+    outline: none;
+    text-align: center;
+    box-shadow: 1px 1px 20px #00ffff;
+    text-align: unset;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#feedbackId {
+    font-size: 35px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 700;
+    padding-bottom: 3em;
+}
