@@ -272,6 +272,8 @@ ul {
   margin-top: 15%;
 }
 
+/*** BOTTONI QUESTION PAGE ***/
+
 #contenitoreRisposte {
   margin-top: 3%;
   display: flex;
@@ -293,6 +295,6 @@ ul {
   margin: 5px;
 }
 
-.coloreViola {
-  color: #c70091;
+.bntColoreViola {
+  background-color: #c70091;
 }

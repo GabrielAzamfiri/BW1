@@ -126,6 +126,8 @@ const questionResults = () => {
 
       risposta.addEventListener("click", () => {
         // al click della risposta, se corretta aggiungi 1 al risultato altrimenti niente
+        risposta.classList.remove("bntRisposta");
+        risposta.classList.add("bntColoreViola");
         if (risposta.innerText === questions[i].correct_answer) {
           console.log("risposta giusta");
           risultato += 1;
@@ -135,9 +137,11 @@ const questionResults = () => {
         }
         i += 1;
 
-        contenitoreRisposte.innerHTML = "";
-        // aggiornamentoCountdown(); // al click fai rimaritre il timmer
-        questionResults(); //al click fai ripartire la funzione con i incrementato di 1
+        setTimeout(() => {
+          // imposto il ritardo 0.3 secondi prima di passare alla domanda successiva
+          contenitoreRisposte.innerHTML = ""; // Pulisci il contenitore delle risposte
+          questionResults(); // Chiama la funzione per caricare la domanda successiva
+        }, 300);
       });
     }
   }
@@ -146,17 +150,6 @@ const questionResults = () => {
 window.onload = function () {
   questionResults(); //chiamo la funzione cosi quando carica la pagina la prima domanda è gia pronta
 };
-
-/*** AL CLICK CAMBIO COLORE IN VIOLA */
-
-function changeColor() {
-  const button = document.getElementById("questionNumber");
-  button.classList.add("coloreViola");
-
-  setTimeout(function () {
-    button.classList.remove("coloreViola");
-  });
-}
 
 /** JS BUTTON WELCOME PAGE */
 
@@ -182,3 +175,5 @@ checkbox.addEventListener("click", check);
 button.addEventListener(click, function () {
   window.location.href = "Question.html";
 });
+
+/*** AL CLICK CAMBIO COLORE IN VIOLA */
