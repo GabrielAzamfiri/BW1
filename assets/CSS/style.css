@@ -132,102 +132,100 @@ label {
 
 /* ***************************************TIMER*********************************** */
 #time {
-    position: absolute;
-    /* consente di posizionarlo esattamente dentro l'elemento padre */
-    /*  top e left servono per modificare la posizione dei bordi superiori e sinistro in modo da centratli al centro */
-    top: 20%;
-    left: 80%;
-    /* con la propietà trasform: traslate andiamo a centrare il contenuto giocando sull'asse orizontale e verticale, in questo caso a meta della sua larghezza e altezza. */
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 150px;
+  position: absolute;
+  top: 12.5%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  width: 100px; 
+  height: 100px; 
 }
 
 /* Stile dei cerchi */
 #time .circle {
-    position: relative;
-    width: 150px;
-    height: 150px;
+  position: relative;
+  width: 100px; 
+  height: 100px; 
 }
 
 #time .circle svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 150px;
-    height: 150px;
-    transform: rotate(270deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px; 
+  height: 100px; 
+  transform: rotate(-90deg); /* Rotazione corretta */
 }
 
 #time .circle svg circle {
-    width: 100%;
-    height: 100%;
-    fill: transparent;
-    stroke-width: 8;
-    transform: translate(5px, 5px);
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 10; 
+  transform: translate(0, 0); /* Centra il cerchio */
 }
 
 #time .circle svg circle.bg {
-    /* Colore di background */
-    stroke: #00ffff;
+  stroke: #00ffff; /* Colore di background */
 }
 
 #time .circle svg circle#progress {
-    /* Colore del cerchio animato */
-    stroke: #e0e0e0;
-    stroke-dasharray: 440;
-    stroke-dashoffset: 440;
-    /* Aggiungo transizione */
-    transition: stroke-dashoffset 1s linear;
+  stroke: #996A9D; /* Colore del cerchio animato */
+  stroke-dasharray: 282.74; 
+  stroke-dashoffset: 282.74; 
+  transition: stroke-dashoffset 1s linear; /* Aggiungo transizione */
 }
 
 /* Testo timer */
 #time .seconds {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-weight: 500;
-    font-size: 2em;
-    text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: 500;
+  font-size: 2.5em; 
+  text-align: center;
 }
 
-#time .seconds .span {
-    font-size: 0.3em;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 3px;
+.span {
+  font-size: 0.18em; 
+  letter-spacing: 0.1em;
+  text-transform: uppercase; 
+  display: block;
+  margin: 0;
 }
 
 #time .seconds #timerSeconds {
-    font-size: 1.8em;
-    margin: 0;
+  font-size: 1em; 
+  margin: 0;
 }
 
-/* Puntino nel cerchio */
-#time .dots {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    transform-origin: center;
-}
 
-#time .dots::before {
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 15px;
-    height: 15px;
-    background: var(--crl);
-    border-radius: 50%;
-    box-shadow: 0 0 20px var(--crl), 0 0 60px var(--crl);
-}
+
+
+/* Puntino nel cerchio da ritoccare dopo se avamza tempo!!! */
+/* #time .dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform-origin: center;
+} */
+
+/* #time .dots::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: #996A9D;
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--crl), 0 0 30px var(--crl);
+} */
 
 /*** BUTTON JS ***/
 
