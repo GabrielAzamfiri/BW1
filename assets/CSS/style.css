@@ -15,6 +15,7 @@ body {
 
 .containerMargin {
     margin-left: 7em;
+
 }
 
 .titoloWP {
@@ -271,10 +272,12 @@ ul {
     text-align: center;
     box-shadow: 1px 1px 20px #00FFFF;
     margin-top: 7em;
+    margin-bottom: 7em;
 }
 .chart-container{
-    width: 30%;
+    width: 38%;
 }
+
 
 .donut{
     color: white;
@@ -325,4 +328,48 @@ ul {
     -ms-transform: translateY(-1.2em);
     -webkit-transform: translateY(-1.2em);
     transform: translateY(-1.2em);
+  }
+
+  #mainResult{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  #correctAnswers{
+    padding-top: 15vh;
+  }
+  #wrongAnswers{
+    padding-top: 15vh;
+  }
+  .resultLableTitle{
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 4.8rem;
+  }
+  .resultLablePercentage{
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 5rem;
+    font-weight: 700;
+    text-align: left;
+  }
+  
+  .resultLableFraction{
+    color: white;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-align: left;
+  }
+  .alignRight{
+    text-align: right;
   }
