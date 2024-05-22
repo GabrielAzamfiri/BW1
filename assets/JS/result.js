@@ -34,3 +34,8 @@ new Chart(myChart, {
     },
   },
 });
+
+
+const graphData= document.getElementsByClassName("donut-segment")
+console.log(graphData)
+graphData.style.strokeDasharray=`chartData[0].data chartData[1].data`
