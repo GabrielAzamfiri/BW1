@@ -102,7 +102,7 @@ ul {
 #time {
   position: absolute; /* consente di posizionarlo esattamente dentro l'elemento padre */
   /*  top e left servono per modificare la posizione dei bordi superiori e sinistro in modo da centratli al centro */
-  top: 10%;
+  top: 20%;
   left: 80%;
   /* con la propietà trasform: traslate andiamo a centrare il contenuto giocando sull'asse orizontale e verticale, in questo caso a meta della sua larghezza e altezza. */
   transform: translate(-50%, -50%);
