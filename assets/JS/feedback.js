@@ -88,6 +88,9 @@ function handleClick(starsElements, index) {
     updateStars(starsElements, index, 'selected'); //starsElements, index e selected sono i parametri
 }
 
+
+
+
 // FRASI DOPO SEND FEEDBACK
 
 // seleziono il pulsante e aggiungo l'evento click su di esso
@@ -120,6 +123,10 @@ buttonSend.addEventListener('click', function () {
     }
 
     resElement.style.display = "block"; // rendo visibile il resElement (div con id resFeedback). (lo faccio perchè nel css prima di questa condizione era nascosto da "display:none". in questo modo viene mostrato solo dopo che si è mandata una valutazione)
+
+    const disappearingDiv = document.getElementById("disappearAfterReview");
+    disappearingDiv.style.display = "none"
+
 });
 
 

@@ -276,7 +276,7 @@ ul {
     color: white;
     font-size: 20px;
     text-align: center;
-    padding-top: 4em;
+    margin-top: 9em;
 }
 
 #resFeedback a {
@@ -290,7 +290,6 @@ ul {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: 16px;
     font-weight: 700;
     height: 40px;
     width: 170px;
@@ -300,4 +299,14 @@ ul {
     text-align: unset;
     padding: 12px;
     text-decoration: none;
+    font-size: 16px;
+}
+
+#feedbackId {
+    font-size: 35px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 700;
+    padding-bottom: 3em;
 }
