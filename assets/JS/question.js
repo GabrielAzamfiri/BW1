@@ -119,10 +119,11 @@ const questionResults = () => {
           console.log("risposta sbagliata");
         }
         i += 1;
-
+        tempoRimanente = 10;
         contenitoreRisposte.innerHTML = "";
         // aggiornamentoCountdown(); // al click fai rimaritre il timmer
         questionResults(); //al click fai ripartire la funzione con i incrementato di 1
+        aggiornamentoCountdown();
       });
     }
   } else {
@@ -137,50 +138,55 @@ window.onload = function () {
   if (window.location.href.endsWith("Question.html")) {
     questionResults(); //chiamo la funzione cosi quando carica la pagina la prima domanda è gia pronta
   }
+};
+//**********************************************************************TIMER************************************************************/
 
-  //*****************TIMER*******************************/
+let progressCircle = document.getElementById("progress");
+let secDot = document.querySelector(".secDot");
 
-  let progressCircle = document.getElementById("progress");
-  let secDot = document.querySelector(".secDot");
+/* Funzione per il timer */
+let tempoRimanente = 10;
+const countdownElement = document.getElementById("timerSeconds");
 
-  /* Funzione per il timer */
-  let tempoRimanente = 60;
-  const countdownElement = document.getElementById("timerSeconds");
+/* Imposto lo strokeDasharray per il cerchio */
+const lunghezzaCirconferenza = 440; // Circonferenza del cerchio
+progressCircle.style.strokeDasharray = lunghezzaCirconferenza;
+progressCircle.style.strokeDashoffset = lunghezzaCirconferenza;
 
-  /* Imposto lo strokeDasharray per il cerchio */
-  const lunghezzaCirconferenza = 440; // Circonferenza del cerchio
-  progressCircle.style.strokeDasharray = lunghezzaCirconferenza;
-  progressCircle.style.strokeDashoffset = lunghezzaCirconferenza;
+function aggiornamentoCountdown() {
+  /* Decrementa il tempo rimanente */
+  tempoRimanente--;
 
-  function aggiornamentoCountdown() {
-    /* Decrementa il tempo rimanente */
-    tempoRimanente--;
+  /* Aggiorna il tempo */
+  countdownElement.textContent = tempoRimanente;
 
-    /* Aggiorna il tempo */
-    countdownElement.textContent = tempoRimanente;
+  /* Calcolo lo strokeDashoffset in base al tempo rimanente */
+  let percentualeCompletamento = tempoRimanente / 10;
+  let strokeDashoffset = lunghezzaCirconferenza * percentualeCompletamento;
+  progressCircle.style.strokeDashoffset = strokeDashoffset;
 
-    /* Calcolo lo strokeDashoffset in base al tempo rimanente */
-    let percentualeCompletamento = tempoRimanente / 60;
-    let strokeDashoffset = lunghezzaCirconferenza * percentualeCompletamento;
-    progressCircle.style.strokeDashoffset = strokeDashoffset;
+  /* Calcola l'angolo di rotazione per il puntino */
+  let angoloRotazione = (10 - tempoRimanente) * 6;
+  secDot.style.transform = `rotate(${angoloRotazione}deg)`;
 
-    /* Calcola l'angolo di rotazione per il puntino */
-    let angoloRotazione = (60 - tempoRimanente) * 6;
-    secDot.style.transform = `rotate(${angoloRotazione}deg)`;
-
-    /* Se scade il tempo */
-    if (tempoRimanente <= 0) {
-      clearInterval(intervalloCountdown);
-      questionResults();
-    }
+  /* Se scade il tempo */
+  if (tempoRimanente <= 0) {
+    tempoRimanente = 10;
+    i += 1;
+    const contenitoreRisposte = document.getElementById("contenitoreRisposte");
+    contenitoreRisposte.innerHTML = "";
+    // aggiornamentoCountdown(); // al click fai rimaritre il timmer
+    questionResults(); //al click fai ripartire la funzione con i incrementato di 1
+    aggiornamentoCountdown();
   }
+}
 
-  /* Impostiamo l'intervallo di aggiornamento del timer */
-  const intervalloCountdown = setInterval(aggiornamentoCountdown, 1000);
+/* Impostiamo l'intervallo di aggiornamento del timer */
+const intervalloCountdown = setInterval(aggiornamentoCountdown, 1000);
 
-  /* La funzione questionResults() è già stata stabilita da un collega */
+/* La funzione questionResults() è già stata stabilita da un collega */
 
-  /*if (window.location.href.endsWith("Results.html")) {
+/*if (window.location.href.endsWith("Results.html")) {
     console.log("File reults");
     console.log(risultato);
 
@@ -215,4 +221,3 @@ window.onload = function () {
       },
     });
   }*/
-};
