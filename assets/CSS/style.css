@@ -134,11 +134,6 @@ label div{
     box-shadow: 1px 1px 20px #00FFFF;
 }
 
-.styleButton:hover {
-    background-color: #00FFFF;
-    box-shadow: 1px 1px 20px #00FFFF;
-}
-
 .styleButtonUnchecked {
     margin-top: 50px;
     height: 40px;
@@ -291,7 +286,48 @@ label div{
     outline: none;
     text-align: center;
     box-shadow: 1px 1px 20px #00FFFF;
-    margin-top: 7em;
-.chart-container{
-    width: 200px;
+    margin-top: 60px;
+}
+
+#resFeedback {
+    display: none;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 9em;
+}
+
+#resFeedback a {
+    display: inline-block;
+    margin-top: 40px;
+    background-color: #00FFFF;
+    border-style: none;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 700;
+    height: 40px;
+    width: 170px;
+    outline: none;
+    text-align: center;
+    box-shadow: 1px 1px 20px #00FFFF;
+    text-align: unset;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#feedbackId {
+    font-size: 35px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 700;
+    padding-bottom: 3em;
 }

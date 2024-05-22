@@ -26,8 +26,8 @@
     <link rel="stylesheet" href="/assets/CSS/reset.css" />
     <link rel="stylesheet" href="/assets/CSS/style.css" />
   </head>
-  <body>
-    <div class="background">
+  <body class="background">
+    <div class="add-feedback">
       <div class="containerMargin">
         <header>
           <img
@@ -39,33 +39,33 @@
       </div>
 
       <!--titolo-->
-      <section>
-        <h1 id="h1Feedback">Tell us how it's going</h1>
-        <div class="textFB">
-          From 0 to 10, how likely are you to recommend EPICODE <br />
-          to a friend or a colleague?
-        </div>
-      </section>
+      <div id="disappearAfterReview">
+        <section>
+          <h1 id="h1Feedback">Tell us how it's going</h1>
+          <div class="textFB">
+            From 0 to 10, how likely are you to recommend EPICODE <br />
+            to a friend or a colleague?
+          </div>
+        </section>
 
-      <!--rating-->
-      <section id="sectionRating">
-        <div id="ratingStars"></div>
-        <div id="textFB">
-          Leave us an open feeedback about your experiences so far
-        </div>
-        <div id="containerBox">
-          <input
-            type="text"
-            class="commentFB"
-            placeholder="Write your comment here"
-            required
-          />
-        </div>
-        <a href="https://epicode.com/en/">
-          <button class="buttonFB">MORE INFO</button></a
-        >
-      </section>
+        <!--rating-->
+        <section id="sectionRating">
+          <div id="ratingStars"></div>
+          <div id="textFB">
+            Leave us an open feeedback about your experiences so far
+          </div>
+          <div id="containerBox">
+            <input
+              type="text"
+              class="commentFB"
+              placeholder="Write your comment here"
+            />
+          </div>
+          <button class="buttonFB">INVIA FEEDBACK</button>
+        </section>
+      </div>
     </div>
+    <div id="resFeedback"></div>
 
     <script src="/assets/JS/feedback.js"></script>
   </body>

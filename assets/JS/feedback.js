@@ -91,4 +91,58 @@ function handleClick(starsElements, index) {
 
 
 
+// FRASI DOPO SEND FEEDBACK
+
+// seleziono il pulsante e aggiungo l'evento click su di esso
+const buttonSend = document.querySelector('.buttonFB');
+buttonSend.addEventListener('click', function () {
+
+    // recupero gli elementi con gli ID 
+    let feedbackElement = document.getElementById("feedbackId"); // feedbackId è l'id del p che contiene la frase che appare ad ogni recensione)
+    let moreInfoElement = document.getElementById("moreInfoId"); // moreInfoId è è l'id del link nel bottone "more info"
+    const resElement = document.getElementById("resFeedback"); // è l'id del div che contiene p e a appena citati
+
+    if (feedbackElement && moreInfoElement) { // dichiaro che se esistono già feedbackElement e moreInfoElement allora chiama la funzione setTextResultFeedback 
+      
+        setTextResultFeedback(selectedRating, feedbackElement);
+
+        // se invece non esistono, dichiaro che vengano creati nuovi elementi "p e "a" con i rispettivi id "feedbackId" e "moreInfoId". associo all'elemento "moreInfoElement" un link e il testo "MORE INFO". questi elementi vengono poi aggiunti al div con id "resFeedback"
+
+    } else {
+        feedbackElement = document.createElement("p");
+        feedbackElement.id = "feedbackId";
+        moreInfoElement = document.createElement("a");
+        moreInfoElement.id = "moreInfoId";
+        moreInfoElement.href = "https://www.epicode.com";
+        moreInfoElement.innerText = "MORE INFO";
+        moreInfoElement.classList.add("infoFb")
+        setTextResultFeedback(selectedRating, feedbackElement);
+
+        resElement.appendChild(feedbackElement);
+        resElement.appendChild(moreInfoElement); // controllando l'esistenza degli elementi e creandola nel caso in cui non esistano mi permette di non sovrascrivere nel caso in cui inviassi più feedback di seguito. in questo modo viene garantito che ogni nuova interazione aggiorni solo il contenuto esistente senza sovrascrivere o creare duplicati
+    }
+
+    resElement.style.display = "block"; // rendo visibile il resElement (div con id resFeedback). (lo faccio perchè nel css prima di questa condizione era nascosto da "display:none". in questo modo viene mostrato solo dopo che si è mandata una valutazione)
+
+    const disappearingDiv = document.getElementById("disappearAfterReview");
+    disappearingDiv.style.display = "none"
+
+});
+
+
+// questa funzione imposta il testo in base alle stelline che vengono selezionate, quindi in base al valore di "selectedRating". a seconda di ciò il testo di "feedbackeElement"
+function setTextResultFeedback(selectedRating, feedbackElement) {
+    if (selectedRating >= 1 && selectedRating <= 5) { // da 1 a 5 stelle comprese
+        feedbackElement.innerText = "I'm sorry. Let us know how we can improve...";
+    }
+    else if (selectedRating >= 6 && selectedRating <= 7) { // da 6 a 7 stelle comprese
+        feedbackElement.innerText = "Thank you for your review.";
+     }
+     else if (selectedRating >= 8) { // tutto ciò che non rientra nelle precedenti due condizioni, quindi da 8 stelle in su. se facessi else e basta anche se non seleziono nessuna stella cade in questa condizione e non sarebbe molto "awesome" XD
+    feedbackElement.innerText = "Awesome! Hope to see you soon!";  
+    }
+}
+
+
+
 
