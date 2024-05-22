@@ -273,5 +273,56 @@ ul {
     margin-top: 7em;
 }
 .chart-container{
-    width: 200px;
+    width: 30%;
 }
+
+.donut{
+    color: white;
+}
+
+.chartText {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    font-size: 0.3em;
+    -moz-transform: translateY(0.25em);
+    -ms-transform: translateY(0.25em);
+    -webkit-transform: translateY(0.25em);
+    transform: translateY(0.25em);
+  }
+
+.chartLabel {
+  font-size: 0.45em;
+  font-weight: 700;
+  fill: white;
+  line-height: 1;
+  text-anchor: middle;
+  -moz-transform: translateY(-3.6em);
+  -ms-transform: translateY(-3.6em);
+  -webkit-transform: translateY(-3.6em);
+  transform: translateY(-3.6em);
+}
+
+.chartLabel2 {
+  font-size: 0.45em;
+  font-weight: 700;
+  line-height: 1;
+  fill: #00FFFF;
+  text-anchor: middle;
+  -moz-transform: translateY(-2.4em);
+  -ms-transform: translateY(-2.4em);
+  -webkit-transform: translateY(-2.4em);
+  transform: translateY(-2.4em);
+}
+.chartLabel3 {
+    font-size: 0.30em;
+    font-family: "Inter", sans-serif;
+    fill: white;
+    font-weight: 200;
+    text-anchor: middle;
+    -moz-transform: translateY(-1.2em);
+    -ms-transform: translateY(-1.2em);
+    -webkit-transform: translateY(-1.2em);
+    transform: translateY(-1.2em);
+  }
