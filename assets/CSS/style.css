@@ -123,6 +123,7 @@ ul {
   width: 100px; 
   height: 100px; 
   transform: rotate(-90deg); /* Rotazione corretta */
+  filter: drop-shadow(14px 5px 11px #000000);
 }
 
 #time .circle svg circle {
@@ -135,6 +136,7 @@ ul {
 
 #time .circle svg circle.bg {
   stroke: #00ffff; /* Colore di background */
+  text-shadow: 5px 5px 48px 0px #000000;
 }
 
 #time .circle svg circle#progress {
