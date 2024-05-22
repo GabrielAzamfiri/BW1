@@ -27,6 +27,7 @@ button.addEventListener("click", function () {
   }
 });
 
-lable.addEventListener("click", function () {
-  document.getElementById("divCheckbox").style.backgroundColor = "white";
-});
+// const label = document.querySelector("lablel");
+// label.addEventListener("click", function () {
+//   document.getElementById("divCheckbox").style.backgroundColor = "white";
+// });
