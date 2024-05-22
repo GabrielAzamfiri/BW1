@@ -14,7 +14,9 @@ body {
 }
 
 .containerMargin {
-  margin-left: 7em;
+  width: 70%;
+  margin: auto;
+  /* margin-left: 7em; */
 }
 
 .titoloWP {
@@ -103,22 +105,43 @@ label {
   display: none;
   /* padding: 10rem; */
 }
-#sectionCheckboxWP {
-  padding-top: 6em;
-}
-
-#sectionCheckboxWP {
-  margin-top: -5vh;
 #checkWP {
   font-weight: 600;
 }
-
 #sectionCheckboxWP {
-  padding-top: 6em;
+  margin: 4rem 0;
 }
 
-#sectionCheckboxWP {
-  margin-top: -5vh;
+/************************************************* BUTTON JS ****************************************************************/
+#buttonJs {
+  display: inline-block;
+  margin-left: 10rem;
+}
+.styleButton {
+  background-color: #00ffff;
+  border-style: none;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  height: 60px;
+  text-align: center;
+  padding: 0 5rem;
+  box-shadow: 1px 1px 20px #00ffff;
+}
+
+.styleButtonUnchecked {
+  height: 60px;
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0 5rem;
+  border: 1px solid white;
+  background-color: transparent;
+  color: rgb(248, 242, 242);
+  cursor: not-allowed;
 }
 /* ***************************************TIMER*********************************** */
 #time {
@@ -216,42 +239,6 @@ label {
   background: var(--crl);
   border-radius: 50%;
   box-shadow: 0 0 20px var(--crl), 0 0 60px var(--crl);
-}
-/************************************************* BUTTON JS ****************************************************************/
-
-.styleButton,
-.styleButton:hover {
-  background-color: #00ffff;
-  border-style: none;
-  box-sizing: border-box;
-  color: black;
-  cursor: pointer;
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-size: 16px;
-  font-weight: 700;
-  height: 40px;
-  outline: none;
-  text-align: center;
-  padding: 0 3rem;
-  margin-left: 25%;
-  margin-top: 50px;
-  box-shadow: 1px 1px 20px #00ffff;
-}
-
-.styleButtonUnchecked {
-  margin-top: 50px;
-  height: 40px;
-  font-family: "Outfit", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  margin-left: 25%;
-  padding: 0 3rem;
-  border: 1px solid white;
-  background-color: transparent;
-  color: white;
-  cursor: not-allowed;
 }
 
 .containerQuestion {
