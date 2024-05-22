@@ -104,7 +104,11 @@ const questionResults = () => {
   //creazione bottoni
   if (i < questions.length) {
     const questionNumber = document.getElementById("questionNumber");
-    questionNumber.innerText = `QUESTION ${i + 1}/10`; //aggiorno il conteggio delle domande
+    questionNumber.innerHTML = `QUESTION ${
+      //aggiorno il conteggio delle domande
+      i + 1
+    }<span class="differentColor"> / 10</span>`; // aggiungo uno span in js per il cambio colore del numero domanda
+
     domanda.innerText = questions[i].question; //cambio il testo della domanda
     const numeriRandom = []; // array di numeri random da 0 al numero di risposte ( serve per mettere le riposte in ordine casuale)
 

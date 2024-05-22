@@ -284,6 +284,8 @@ ul {
 
 .btnRisposta {
   background-color: rgba(165, 165, 165, 0.315);
+  border-width: 3px;
+  border-color: white;
   color: white;
   font-family: "Inter", sans-serif;
   font-weight: 500;
@@ -297,4 +299,10 @@ ul {
 
 .bntColoreViola {
   background-color: #c70091;
+}
+
+.differentColor {
+  color: #c70091;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
 }
