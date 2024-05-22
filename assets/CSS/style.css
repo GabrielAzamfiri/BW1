@@ -88,14 +88,18 @@ label {
     border: 2.5px solid white;
     width: 13px;
     height: 13px;
-    display: inline-block;
+    display: flex;
     margin-right: 10px;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
 }
 
 
-.clicked {
-    background-color: #00ffff;
+.fa-check {
+    color: white;
+    font-size: 10px;
+    display: none;
 }
 
 
