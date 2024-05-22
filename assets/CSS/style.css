@@ -42,6 +42,14 @@ body {
     padding-bottom: 0.9em;
 }
 
+#checkboxWP:checked {
+    accent-color: #00FFFF;
+}
+
+#checkboxWP {
+    accent-color: transparent;
+}
+
 .textWP,
 .liWP,
 #checkWP,
