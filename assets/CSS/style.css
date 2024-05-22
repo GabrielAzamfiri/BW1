@@ -344,14 +344,14 @@ ul {
   #wrongAnswers{
     padding-top: 15vh;
   }
-  .resultLableTitle{
+  .resultLabelTitle{
     color: white;
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 4.8rem;
   }
-  .resultLablePercentage{
+  .resultLabelPercentage{
     color: white;
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
@@ -361,7 +361,7 @@ ul {
     text-align: left;
   }
   
-  .resultLableFraction{
+  .resultLabelFraction{
     color: white;
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
