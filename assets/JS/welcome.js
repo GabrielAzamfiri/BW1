@@ -26,11 +26,11 @@ button.addEventListener("click", function () {
     // window.location.href = "Question.html";
     const main = document.querySelector("main");
     main.innerHTML = ""; //pulisco il main per inserire la scelta della difficolta esame
+
+    // creo tutti i nuovi tag a cui assegno le classi gia presenti nella pagina prima
     const selezionaDifficolta = document.createElement("h1");
     selezionaDifficolta.classList.add("titoloWP");
     selezionaDifficolta.innerText = "Choose your examt difficulty:";
-
-    // creo tutti i nuovi tag a cui assegno le classi gia presenti nella pagina prima
     const sectionCheckboxWP = document.createElement("div");
     sectionCheckboxWP.id = "sectionCheckboxWP";
     const label = document.createElement("label");
@@ -54,11 +54,14 @@ button.addEventListener("click", function () {
     button2WP.textContent = "PROCEED";
     button2WP.disabled = true; // al inizio il bottone è disabilitato
     button2WP.classList.add("styleButtonUnchecked");
+
+    /* aggiungiamo alla main gli elementi */
     divNewButton.appendChild(button2WP);
     divCheckbox.appendChild(faCheck);
     label.append(divCheckbox, checkWP);
     sectionCheckboxWP.append(label, checkboxWP);
     main.append(selezionaDifficolta, sectionCheckboxWP, divNewButton);
+    /* funzione per aggiornare lo stato del bottone */
     function newCheck() {
       button2WP.classList.remove("styleButton", "styleButtonUnchecked");
 
