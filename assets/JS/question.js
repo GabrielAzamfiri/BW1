@@ -159,7 +159,8 @@ let progressCircle = document.getElementById("progress");
 let secDot = document.querySelector(".secDot");
 
 /* Funzione per il timer */
-let tempoRimanente = 60;
+let tempoTotale = 60;
+let tempoRimanente = tempoTotale;
 const countdownElement = document.getElementById("timerSeconds");
 
 /* Imposto lo strokeDasharray per il cerchio */
@@ -175,18 +176,18 @@ function aggiornamentoCountdown() {
   countdownElement.textContent = tempoRimanente;
 
   /* Calcolo lo strokeDasharray in base al tempo rimanente */
-  let percentualeCompletamento = (60 - tempoRimanente) / 60;
+  let percentualeCompletamento = (tempoTotale - tempoRimanente) / tempoTotale;
   let lunghezzaVisibile = lunghezzaCirconferenza * percentualeCompletamento;
   let lunghezzaInvisibile = lunghezzaCirconferenza - lunghezzaVisibile;
   progressCircle.style.strokeDasharray = `${lunghezzaVisibile} ${lunghezzaInvisibile}`;
-  /* Calcolo lo strokeDashoffset in base al tempo rimanente */
+  /* Calcolo lo strokeDashoffset in base al tempo rimanente */ /* questo poteva essere una potenziale opzione ma al cambio del tempo rimamanente dava un effetto di riempimento del timer, percio scartata. resta comunque un alternativa da tenere a mente! */
   /*   let percentualeCompletamento = tempoRimanente / 60;
   let strokeDashoffset = lunghezzaCirconferenza * percentualeCompletamento;
   progressCircle.style.strokeDashoffset = strokeDashoffset; */
 
-  /* Calcola l'angolo di rotazione per il puntino */ /* DA FARE SE AVANZA TEMPO */
-  /*  let angoloRotazione = (60 - tempoRimanente) * 6;
-  secDot.style.transform = `rotate(${angoloRotazione}deg)`; */
+  /* Calcola l'angolo di rotazione per il puntino */
+  let angoloRotazione = (tempoTotale - tempoRimanente) * (360 / tempoTotale);
+  secDot.style.transform = `rotate(${angoloRotazione}deg)`;
 
   /* Se scade il tempo */
   if (tempoRimanente <= 0) {

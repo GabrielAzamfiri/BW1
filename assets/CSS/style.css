@@ -251,7 +251,7 @@ label {
 }
 
 /* Puntino nel cerchio */
-/* #time .dots {
+#time .dots {
   position: absolute;
   top: 0;
   left: 0;
@@ -264,15 +264,14 @@ label {
 #time .dots::before {
   content: "";
   position: absolute;
-  top: -2px;
+  top: 0px;
   left: 50%;
   transform: translateX(-50%);
   width: 10px;
   height: 10px;
-  background: #996A9D;
+  background:#00ffff;
   border-radius: 50%;
-  box-shadow: 0 0 10px var(--crl), 0 0 30px var(--crl);
-} */
+}
 
 
 .containerQuestion {
