@@ -22,7 +22,7 @@ checkbox.addEventListener("click", check);
 
 button.addEventListener("click", function () {
   if (button.disabled === false) {
-    checkbox.checked = false;
+    // checkbox.checked = false;
     // window.location.href = "Question.html";
     const main = document.querySelector("main");
     main.innerHTML = ""; //pulisco il main per inserire la scelta della difficolta esame
@@ -44,10 +44,10 @@ button.addEventListener("click", function () {
     const checkWP = document.createElement("span");
     checkWP.id = "checkWP";
     checkWP.innerText = "Easy";
-    const checkboxWP = document.createElement("input");
-    checkboxWP.type = "checkbox";
-    checkboxWP.id = "checkboxWP";
-    checkboxWP.setAttribute("required", "");
+    const checkboxEasy = document.createElement("input");
+    checkboxEasy.type = "checkbox";
+    checkboxEasy.id = "checkboxWP";
+    checkboxEasy.setAttribute("required", "");
     const divNewButton = document.createElement("div");
     divNewButton.id = "buttonJs";
     const button2WP = document.createElement("button");
@@ -57,12 +57,13 @@ button.addEventListener("click", function () {
     divNewButton.appendChild(button2WP);
     divCheckbox.appendChild(faCheck);
     label.append(divCheckbox, checkWP);
-    sectionCheckboxWP.append(label, checkboxWP);
+    sectionCheckboxWP.append(label, checkboxEasy);
     main.append(selezionaDifficolta, sectionCheckboxWP, divNewButton);
+
     function newCheck() {
       button2WP.classList.remove("styleButton", "styleButtonUnchecked");
 
-      if (checkboxWP.checked) {
+      if (checkboxEasy.checked) {
         button2WP.classList.add("styleButton");
         button2WP.disabled = false; //se il check box è spuntato, abilito il bottone
       } else {
@@ -71,6 +72,12 @@ button.addEventListener("click", function () {
       }
     }
     label.addEventListener("click", newCheck);
+    button2WP.addEventListener("click", function () {
+      if (button2WP.disabled === false) {
+        checkboxEasy.checked = false;
+        window.location.href = "Question.html";
+      }
+    });
   }
 });
 
