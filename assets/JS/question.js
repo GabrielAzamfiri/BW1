@@ -5,18 +5,13 @@ const questions = [
     difficulty: "easy",
     question: "What does CPU stand for?",
     correct_answer: "Central Processing Unit",
-    incorrect_answers: [
-      "Central Process Unit",
-      "Computer Personal Unit",
-      "Central Processor Unit",
-    ],
+    incorrect_answers: ["Central Process Unit", "Computer Personal Unit", "Central Processor Unit"],
   },
   {
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
+    question: "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
     correct_answer: "Final",
     incorrect_answers: ["Static", "Private", "Public"],
   },
@@ -32,8 +27,7 @@ const questions = [
     category: "Science: Computers",
     type: "boolean",
     difficulty: "easy",
-    question:
-      "Pointers were not used in the original C programming language; they were added later on in C++.",
+    question: "Pointers were not used in the original C programming language; they were added later on in C++.",
     correct_answer: "False",
     incorrect_answers: ["True"],
   },
@@ -41,8 +35,7 @@ const questions = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "What is the most preferred image format used for logos in the Wikimedia database?",
+    question: "What is the most preferred image format used for logos in the Wikimedia database?",
     correct_answer: ".svg",
     incorrect_answers: [".png", ".jpeg", ".gif"],
   },
@@ -52,18 +45,13 @@ const questions = [
     difficulty: "easy",
     question: "In web design, what does CSS stand for?",
     correct_answer: "Cascading Style Sheet",
-    incorrect_answers: [
-      "Counter Strike: Source",
-      "Corrective Style Sheet",
-      "Computer Style Sheet",
-    ],
+    incorrect_answers: ["Counter Strike: Source", "Corrective Style Sheet", "Computer Style Sheet"],
   },
   {
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "What is the code name for the mobile operating system Android 7.0?",
+    question: "What is the code name for the mobile operating system Android 7.0?",
     correct_answer: "Nougat",
     incorrect_answers: ["Ice Cream Sandwich", "Jelly Bean", "Marshmallow"],
   },
@@ -87,8 +75,7 @@ const questions = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "Which programming language shares its name with an island in Indonesia?",
+    question: "Which programming language shares its name with an island in Indonesia?",
     correct_answer: "Java",
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
@@ -100,12 +87,14 @@ let risultato = 0;
 const questionResults = () => {
   const domanda = document.getElementById("domanda");
   if (i < questions.length) {
-    const risposte = questions[i].correct_answer
-      .concat("," + questions[i].incorrect_answers)
-      .split(","); // array di risposte
+    const risposte = questions[i].correct_answer.concat("," + questions[i].incorrect_answers).split(","); // array di risposte
 
     const questionNumber = document.getElementById("questionNumber");
-    questionNumber.innerText = `QUESTION ${i + 1}/10`; //aggiorno il conteggio delle domande
+    questionNumber.innerHTML = `QUESTION ${
+      //aggiorno il conteggio delle domande
+      i + 1
+    }<span class="differentColor"> / 10</span>`; // aggiungo uno span in js per il cambio colore del numero domanda
+
     domanda.innerText = questions[i].question; //cambio il testo della domanda
     const numeriRandom = []; // array di numeri random da 0 al numero di risposte ( serve per mettere le riposte in ordine casuale)
 
@@ -117,15 +106,16 @@ const questionResults = () => {
       } while (numeriRandom.includes(randomNumber));
       numeriRandom.push(randomNumber);
 
-      const contenitoreRisposte = document.getElementById(
-        "contenitoreRisposte"
-      );
+      const contenitoreRisposte = document.getElementById("contenitoreRisposte");
       const risposta = document.createElement("button");
       risposta.classList.add("btnRisposta");
       risposta.innerText = risposte[numeriRandom[index]]; //come index un numero casuale cosi le riposte sono in ordine casuale
       contenitoreRisposte.appendChild(risposta);
 
       risposta.addEventListener("click", () => {
+        // al click della risposta, se corretta aggiungi 1 al risultato altrimenti niente
+        risposta.classList.remove("btnRisposta");
+        risposta.classList.add("btnColoreViola");
         if (risposta.innerText === questions[i].correct_answer) {
           console.log("risposta giusta");
           // al click della risposta, se corretta aggiungi 1 al risultato altrimenti niente
@@ -135,10 +125,14 @@ const questionResults = () => {
           console.log("risposta sbagliata");
         }
         i += 1;
-        tempoRimanente = 61;
-        contenitoreRisposte.innerHTML = "";
-        questionResults(); //al click fai ripartire la funzione con i incrementato di 1
-        aggiornamentoCountdown(); // al click fai rimaritre il timmer
+
+        setTimeout(() => {
+          // imposto il ritardo 0.3 secondi prima di passare alla domanda successiva
+          contenitoreRisposte.innerHTML = ""; // Pulisci il contenitore delle risposte
+          questionResults(); //al click fai ripartire la funzione con i incrementato di 1
+          tempoRimanente = 61;
+          aggiornamentoCountdown(); // al click fai rimaritre il timmer
+        }, 300);
       });
     }
   } else {
@@ -159,7 +153,8 @@ let progressCircle = document.getElementById("progress");
 let secDot = document.querySelector(".secDot");
 
 /* Funzione per il timer */
-let tempoRimanente = 60;
+let tempoTotale = 60;
+let tempoRimanente = tempoTotale;
 const countdownElement = document.getElementById("timerSeconds");
 
 /* Imposto lo strokeDasharray per il cerchio */
@@ -175,18 +170,18 @@ function aggiornamentoCountdown() {
   countdownElement.textContent = tempoRimanente;
 
   /* Calcolo lo strokeDasharray in base al tempo rimanente */
-  let percentualeCompletamento = (60 - tempoRimanente) / 60;
+  let percentualeCompletamento = (tempoTotale - tempoRimanente) / tempoTotale;
   let lunghezzaVisibile = lunghezzaCirconferenza * percentualeCompletamento;
   let lunghezzaInvisibile = lunghezzaCirconferenza - lunghezzaVisibile;
   progressCircle.style.strokeDasharray = `${lunghezzaVisibile} ${lunghezzaInvisibile}`;
-  /* Calcolo lo strokeDashoffset in base al tempo rimanente */
+  /* Calcolo lo strokeDashoffset in base al tempo rimanente */ /* questo poteva essere una potenziale opzione ma al cambio del tempo rimamanente dava un effetto di riempimento del timer, percio scartata. resta comunque un alternativa da tenere a mente! */
   /*   let percentualeCompletamento = tempoRimanente / 60;
   let strokeDashoffset = lunghezzaCirconferenza * percentualeCompletamento;
   progressCircle.style.strokeDashoffset = strokeDashoffset; */
 
-  /* Calcola l'angolo di rotazione per il puntino */ /* DA FARE SE AVANZA TEMPO */
-  /*  let angoloRotazione = (60 - tempoRimanente) * 6;
-  secDot.style.transform = `rotate(${angoloRotazione}deg)`; */
+  /* Calcola l'angolo di rotazione per il puntino */
+  let angoloRotazione = (tempoTotale - tempoRimanente) * (360 / tempoTotale);
+  secDot.style.transform = `rotate(${angoloRotazione}deg)`;
 
   /* Se scade il tempo */
   if (tempoRimanente <= 0) {
