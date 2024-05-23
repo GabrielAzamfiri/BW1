@@ -1,4 +1,4 @@
-const questions = [
+const questionsEasy = [
   {
     category: "Science: Computers",
     type: "multiple",
@@ -80,14 +80,177 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
-
+const questionsMedium = [
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: ".at is the top-level domain for what country?",
+    correct_answer: "Austria",
+    incorrect_answers: ["Argentina", "Australia", "Angola"],
+  },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "Which of the following is a personal computer made by the Japanese company Fujitsu?",
+    correct_answer: "FM-7",
+    incorrect_answers: ["PC-9801", "Xmillennium ", "MSX"],
+  },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "On which day did the World Wide Web go online?",
+    correct_answer: "December 20, 1990",
+    incorrect_answers: ["December 17, 1996", "November 12, 1990", "November 24, 1995"],
+  },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "Generally, which component of a computer draws the most power?",
+    correct_answer: "Video Card",
+    incorrect_answers: ["Hard Drive", "Processor", "Power Supply"],
+  },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "In CSS, which of these values CANNOT be used with the &quot;position&quot; property?",
+    correct_answer: "center",
+    incorrect_answers: ["static", "absolute", "relative"],
+  },
+  {
+    type: "boolean",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "All program codes have to be compiled into an executable file in order to be run. This file can then be executed on any machine.",
+    correct_answer: "False",
+    incorrect_answers: ["True"],
+  },
+  {
+    type: "boolean",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "It&#039;s not possible to format a write-protected DVD-R Hard Disk.",
+    correct_answer: "True",
+    incorrect_answers: ["False"],
+  },
+  {
+    type: "boolean",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "The first computer bug was formed by faulty wires.",
+    correct_answer: "False",
+    incorrect_answers: ["True"],
+  },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "What does &quot;LCD&quot; stand for?",
+    correct_answer: "Liquid Crystal Display",
+    incorrect_answers: ["Language Control Design", "Last Common Difference", "Long Continuous Design"],
+  },
+  {
+    type: "multiple",
+    difficulty: "medium",
+    category: "Science: Computers",
+    question: "All of the following programs are classified as raster graphics editors EXCEPT:",
+    correct_answer: "Inkscape",
+    incorrect_answers: ["Paint.NET", "GIMP", "Adobe Photoshop"],
+  },
+];
+const questionHard = [
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "What vulnerability ranked #1 on the OWASP Top 10 in 2013?",
+    correct_answer: "Injection ",
+    incorrect_answers: ["Broken Authentication", "Cross-Site Scripting", "Insecure Direct Object References"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "Which kind of algorithm is Ron Rivest not famous for creating?",
+    correct_answer: "Secret sharing scheme",
+    incorrect_answers: ["Hashing algorithm", "Asymmetric encryption", "Stream cipher"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "What major programming language does Unreal Engine 4 use?",
+    correct_answer: "C++",
+    incorrect_answers: ["Assembly", "C#", "ECMAScript"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "Which of the following computer components can be built using only NAND gates?",
+    correct_answer: "ALU",
+    incorrect_answers: ["CPU", "RAM", "Register"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "What does the International System of Quantities refer 1024 bytes as?",
+    correct_answer: "Kibibyte",
+    incorrect_answers: ["Kylobyte", "Kilobyte", "Kelobyte"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "What was the name of the first Bulgarian personal computer?",
+    correct_answer: "IMKO-1",
+    incorrect_answers: ["Pravetz 82", "Pravetz 8D", "IZOT 1030"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "What is the name given to layer 4 of the Open Systems Interconnection (ISO) model?",
+    correct_answer: "Transport",
+    incorrect_answers: ["Session", "Data link", "Network"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "The Harvard architecture for micro-controllers added which additional bus?",
+    correct_answer: "Instruction",
+    incorrect_answers: ["Address", "Data", "Control"],
+  },
+  {
+    type: "multiple",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "Which of the following is the oldest of these computers by release date?",
+    correct_answer: "TRS-80",
+    incorrect_answers: ["Commodore 64", "ZX Spectrum", "Apple 3"],
+  },
+  {
+    type: "boolean",
+    difficulty: "hard",
+    category: "Science: Computers",
+    question: "DHCP stands for Dynamic Host Configuration Port.",
+    correct_answer: "False",
+    incorrect_answers: ["True"],
+  },
+];
 //*******************************************************************FUNZIONE DOMANDE*************************************************************************** */
 let i = 0; //per cambiare index array questions al click
 let risultato = 0;
 const questionResults = () => {
   const domanda = document.getElementById("domanda");
-  if (i < questions.length) {
-    const risposte = questions[i].correct_answer.concat("," + questions[i].incorrect_answers).split(","); // array di risposte
+  if (i < questionsEasy.length) {
+    const risposte = questionsEasy[i].correct_answer.concat("," + questionsEasy[i].incorrect_answers).split(","); // array di risposte
 
     const questionNumber = document.getElementById("questionNumber");
     questionNumber.innerHTML = `QUESTION ${
@@ -95,7 +258,7 @@ const questionResults = () => {
       i + 1
     }<span class="differentColor"> / 10</span>`; // aggiungo uno span in js per il cambio colore del numero domanda
 
-    domanda.innerText = questions[i].question; //cambio il testo della domanda
+    domanda.innerText = questionsEasy[i].question; //cambio il testo della domanda
     const numeriRandom = []; // array di numeri random da 0 al numero di risposte ( serve per mettere le riposte in ordine casuale)
 
     for (let index = 0; index < risposte.length; index++) {
@@ -116,7 +279,7 @@ const questionResults = () => {
         // al click della risposta, se corretta aggiungi 1 al risultato altrimenti niente
         risposta.classList.remove("btnRisposta");
         risposta.classList.add("btnColoreViola");
-        if (risposta.innerText === questions[i].correct_answer) {
+        if (risposta.innerText === questionsEasy[i].correct_answer) {
           console.log("risposta giusta");
           // al click della risposta, se corretta aggiungi 1 al risultato altrimenti niente
           risultato += 1;
