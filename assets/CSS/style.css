@@ -123,7 +123,7 @@ ul {
   width: 100px; 
   height: 100px; 
   transform: rotate(-90deg); /* Rotazione corretta */
-  filter: drop-shadow(14px 5px 11px #000000);
+  filter: drop-shadow(14px 5px 45px #000000);
 }
 
 #time .circle svg circle {
