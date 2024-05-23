@@ -47,17 +47,17 @@ body {
   padding-bottom: 0.5em;
 }
 
-#checkboxWP:checked {
-  accent-color: #00ffff;
-}
-
-#checkboxWP {
+#checkboxWP,
+#checkboxEasy,
+#checkboxMedium,
+#checkboxHard {
   accent-color: transparent;
 }
 
 .textWP,
 .liWP,
 #checkWP,
+.checkWP,
 .textFB {
   color: white;
   font-family: "Inter", sans-serif;
@@ -93,7 +93,8 @@ ul {
   font-weight: 700;
 }
 
-#checkWP {
+#checkWP,
+.checkWP {
   font-weight: 600;
 }
 
@@ -101,7 +102,8 @@ label {
   margin-right: 1rem;
 }
 
-#divCheckbox {
+#divCheckbox,
+.divCheckbox {
   display: inline-block;
   border: 2.5px solid white;
   width: 13px;
@@ -119,16 +121,20 @@ label {
   display: none;
 }
 
-#labelWP {
+#labelWP,
+.labelWP {
   display: flex;
   align-items: center;
 }
-
-#checkboxWP {
-  /* display: none; */
+#checkboxWP,
+#checkboxEasy,
+#checkboxMedium,
+#checkboxHard {
+  display: none;
 }
 
-#sectionCheckboxWP {
+#sectionCheckboxWP,
+.sectionCheckboxWP {
   display: inline-block;
   margin: 4rem 0;
 }
