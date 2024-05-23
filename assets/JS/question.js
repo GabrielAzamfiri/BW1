@@ -142,6 +142,11 @@ const questionResults = () => {
           console.log("risposta sbagliata");
           risposta.id = "btnRosso";
         }
+
+        // Disabilito tutti i pulsanti di risposta così dopo aver selezionato una risposta, non posso selezionarne altre
+        const allButtons = contenitoreRisposte.querySelectorAll("button");
+        allButtons.forEach((button) => (button.disabled = true));
+
         i += 1;
 
         setTimeout(() => {
@@ -150,7 +155,7 @@ const questionResults = () => {
           questionResults(); //al click faccio ripartire la funzione con i incrementato di 1
           tempoRimanente = 61;
           aggiornamentoCountdown(); // al click faccio ripartire il timmer
-        }, 300);
+        }, 800);
       });
     }
   } else {
