@@ -198,6 +198,7 @@ label {
   width: 100px;
   height: 100px;
   transform: rotate(-90deg); /* Rotazione corretta */
+  filter: drop-shadow(0px 0px 17px #000000);
 }
 
 #time .circle svg circle {
@@ -210,6 +211,7 @@ label {
 
 #time .circle svg circle.bg {
   stroke: #00ffff; /* Colore di background */
+  text-shadow: 5px 5px 48px 0px #000000;
 }
 
 #time .circle svg circle#progress {
@@ -226,9 +228,10 @@ label {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-weight: 500;
-  font-size: 2.5em;
+  font-weight: 400;
+  font-size: 2.2em;
   text-align: center;
+
 }
 
 .span {
@@ -237,15 +240,17 @@ label {
   text-transform: uppercase;
   display: block;
   margin: 0;
+  font-family: "Outfit", sans-serif;
 }
 
 #time .seconds #timerSeconds {
   font-size: 1em;
   margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-/* Puntino nel cerchio da ritoccare dopo se avamza tempo!!! */
-/* #time .dots {
+/* Puntino nel cerchio */
+#time .dots {
   position: absolute;
   top: 0;
   left: 0;
@@ -253,20 +258,20 @@ label {
   height: 100%;
   border-radius: 50%;
   transform-origin: center;
-} */
+}
 
-/* #time .dots::before {
+#time .dots::before {
   content: "";
   position: absolute;
-  top: -2px;
+  top: 0px;
   left: 50%;
   transform: translateX(-50%);
   width: 10px;
   height: 10px;
-  background: #996A9D;
+  background:#00ffff;
   border-radius: 50%;
-  box-shadow: 0 0 10px var(--crl), 0 0 30px var(--crl);
-} */
+}
+
 
 .containerQuestion {
   text-align: center;
@@ -382,6 +387,7 @@ label {
 
 .donut {
   color: white;
+  filter: drop-shadow(7px 5px 18px #000000);
 }
 
 .chartText {
