@@ -27,7 +27,9 @@ checkboxHard.addEventListener("click", check);
 
 button.addEventListener("click", function () {
   if (button.disabled === false) {
-    checkbox.checked = false;
+    checkboxEasy.checked = false;
+    checkboxMedium.checked = false;
+    checkboxHard.checked = false;
     window.location.href = "Question.html";
   }
 });

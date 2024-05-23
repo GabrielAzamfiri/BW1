@@ -286,6 +286,7 @@ const questionHard = [
 //*******************************************************************FUNZIONE DOMANDE*************************************************************************** */
 let i = 0; //per cambiare index array questions al click
 let risultato = 0;
+let questionsChoose = questionHard;
 const questionResults = () => {
   const domanda = document.getElementById("domanda");
   if (i < questionsChoose.length) {
