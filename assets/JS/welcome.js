@@ -22,62 +22,62 @@ checkbox.addEventListener("click", check);
 
 button.addEventListener("click", function () {
   if (button.disabled === false) {
-    // checkbox.checked = false;
-    // window.location.href = "Question.html";
-    const main = document.querySelector("main");
-    main.innerHTML = ""; //pulisco il main per inserire la scelta della difficolta esame
-    const selezionaDifficolta = document.createElement("h1");
-    selezionaDifficolta.classList.add("titoloWP");
-    selezionaDifficolta.innerText = "Choose your examt difficulty:";
+    checkbox.checked = false;
+    window.location.href = "ChooseDifficulty.html";
+    //   const main = document.querySelector("main");
+    //   main.innerHTML = ""; //pulisco il main per inserire la scelta della difficolta esame
+    //   const selezionaDifficolta = document.createElement("h1");
+    //   selezionaDifficolta.classList.add("titoloWP");
+    //   selezionaDifficolta.innerText = "Choose your exam difficulty:";
 
-    // creo tutti i nuovi tag a cui assegno le classi gia presenti nella pagina prima
-    const sectionCheckboxWP = document.createElement("div");
-    sectionCheckboxWP.id = "sectionCheckboxWP";
-    const label = document.createElement("label");
-    label.setAttribute("for", "checkboxWP");
-    label.id = "labelWP";
-    const divCheckbox = document.createElement("div");
-    divCheckbox.id = "divCheckbox";
-    const faCheck = document.createElement("i");
-    faCheck.id = "checkIcon";
-    faCheck.classList.add("fa-check");
-    const checkWP = document.createElement("span");
-    checkWP.id = "checkWP";
-    checkWP.innerText = "Easy";
-    const checkboxEasy = document.createElement("input");
-    checkboxEasy.type = "checkbox";
-    checkboxEasy.id = "checkboxWP";
-    checkboxEasy.setAttribute("required", "");
-    const divNewButton = document.createElement("div");
-    divNewButton.id = "buttonJs";
-    const button2WP = document.createElement("button");
-    button2WP.textContent = "PROCEED";
-    button2WP.disabled = true; // al inizio il bottone è disabilitato
-    button2WP.classList.add("styleButtonUnchecked");
-    divNewButton.appendChild(button2WP);
-    divCheckbox.appendChild(faCheck);
-    label.append(divCheckbox, checkWP);
-    sectionCheckboxWP.append(label, checkboxEasy);
-    main.append(selezionaDifficolta, sectionCheckboxWP, divNewButton);
+    //   // creo tutti i nuovi tag a cui assegno le classi gia presenti nella pagina prima
+    //   const sectionCheckboxWP = document.createElement("div");
+    //   sectionCheckboxWP.id = "sectionCheckboxWP";
+    //   const label = document.createElement("label");
+    //   label.setAttribute("for", "checkboxWP");
+    //   label.id = "labelWP";
+    //   const divCheckbox = document.createElement("div");
+    //   divCheckbox.id = "divCheckbox";
+    //   const faCheck = document.createElement("i");
+    //   faCheck.id = "checkIcon";
+    //   faCheck.classList.add("fa-check");
+    //   const checkWP = document.createElement("span");
+    //   checkWP.id = "checkWP";
+    //   checkWP.innerText = "Easy";
+    //   const checkboxEasy = document.createElement("input");
+    //   checkboxEasy.type = "checkbox";
+    //   checkboxEasy.id = "checkboxWP";
+    //   checkboxEasy.setAttribute("required", "");
+    //   const divNewButton = document.createElement("div");
+    //   divNewButton.id = "buttonJs";
+    //   const button2WP = document.createElement("button");
+    //   button2WP.textContent = "PROCEED";
+    //   button2WP.disabled = true; // al inizio il bottone è disabilitato
+    //   button2WP.classList.add("styleButtonUnchecked");
+    //   divNewButton.appendChild(button2WP);
+    //   divCheckbox.appendChild(faCheck);
+    //   label.append(divCheckbox, checkWP);
+    //   sectionCheckboxWP.append(label, checkboxEasy);
+    //   main.append(selezionaDifficolta, sectionCheckboxWP, divNewButton);
 
-    function newCheck() {
-      button2WP.classList.remove("styleButtonUnchecked", "styleButton");
+    //   function newCheck() {
+    //     button2WP.classList.remove("styleButtonUnchecked", "styleButton");
 
-      if (checkboxEasy.checked) {
-        button2WP.classList.add("styleButton");
-        button2WP.disabled = false; //se il check box è spuntato, abilito il bottone
-      } else {
-        button2WP.classList.add("styleButtonUnchecked");
-        button2WP.disabled = true; // se il check box non è abilitato / disabilito button
-      }
-    }
-    checkboxEasy.addEventListener("click", newCheck);
-    button2WP.addEventListener("click", function () {
-      if (button2WP.disabled === false) {
-        checkboxEasy.checked = false;
-        window.location.href = "Question.html";
-      }
-    });
+    //     if (checkboxEasy.checked) {
+    //       button2WP.classList.add("styleButton");
+    //       button2WP.disabled = false; //se il check box è spuntato, abilito il bottone
+    //     } else {
+    //       button2WP.classList.add("styleButtonUnchecked");
+    //       button2WP.disabled = true; // se il check box non è abilitato / disabilito button
+    //     }
+    //   }
+    //   checkboxEasy.addEventListener("click", newCheck);
+    //   button2WP.addEventListener("click", function () {
+    //     if (button2WP.disabled === false) {
+    //       checkboxEasy.checked = false;
+    //       window.location.href = "Question.html";
+    //     }
+    //   });
   }
 });
 
