@@ -114,8 +114,8 @@ const questionResults = () => {
 
       risposta.addEventListener("click", () => {
         // al click della risposta, se corretta aggiungi 1 al risultato altrimenti niente
-        risposta.classList.remove("bntRisposta");
-        risposta.classList.add("bntColoreViola");
+        risposta.classList.remove("btnRisposta");
+        risposta.classList.add("btnColoreViola");
         if (risposta.innerText === questions[i].correct_answer) {
           console.log("risposta giusta");
           // al click della risposta, se corretta aggiungi 1 al risultato altrimenti niente
@@ -125,15 +125,13 @@ const questionResults = () => {
           console.log("risposta sbagliata");
         }
         i += 1;
-        tempoRimanente = 61;
-        contenitoreRisposte.innerHTML = "";
-        questionResults(); //al click fai ripartire la funzione con i incrementato di 1
-        aggiornamentoCountdown(); // al click fai rimaritre il timmer
 
         setTimeout(() => {
           // imposto il ritardo 0.3 secondi prima di passare alla domanda successiva
           contenitoreRisposte.innerHTML = ""; // Pulisci il contenitore delle risposte
-          questionResults(); // Chiama la funzione per caricare la domanda successiva
+          questionResults(); //al click fai ripartire la funzione con i incrementato di 1
+          tempoRimanente = 61;
+          aggiornamentoCountdown(); // al click fai rimaritre il timmer
         }, 300);
       });
     }
