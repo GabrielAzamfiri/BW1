@@ -1,84 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
 
-    <title>Document</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/assets/CSS/reset.css" />
-    <link rel="stylesheet" href="/assets/CSS/style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 
-  <body>
-    <div class="containerMargin">
-      <header>
-        <img src="assets/img/epicode_logo.png" alt="logo epicode" class="logoResults" />
-      </header>
+  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/assets/CSS/reset.css" />
+  <link rel="stylesheet" href="/assets/CSS/style.css" />
+</head>
 
-      <!--titolo-->
-      <div id="containerResults">
-        <h1>Results</h1>
-        <h3>The summary of your answers:</h3>
-        <div id="graficoRisposte"></div>
-        <div id="mainResult">
-          <div id="correctAnswers">
-            <h2 class="resultLabelTitle">Correct</h2>
-            <h2 class="resultLabelPercentage">50%</h2>
-            <p class="resultLabelFraction"></p>
-          </div>
-          <div class="chart-container">
-            <!-- <canvas class="my-chart"></canvas> -->
+<body>
+  <div class="containerMargin">
+    <header>
+      <img src="assets/img/epicode_logo.png" alt="logo epicode" class="logoResults" />
+    </header>
 
-            <svg width="100%" height="100%" viewBox="0 0 42 42" class="donut">
-              <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="transparent"></circle>
-              <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#00FFFF" stroke-width="6"></circle>
-
-              <circle
-                class="donut-segment"
-                cx="21"
-                cy="21"
-                r="15.91549430918954"
-                fill="transparent"
-                stroke="#C70091"
-                stroke-width="6"
-                stroke-dashoffset="25"
-              ></circle>
-              <g class="chartText">
-                <text x="50%" y="50%" class="chartLabel">Congratulations!</text>
-                <text x="50%" y="50%" class="chartLabel2">You Passed the exam.</text>
-                <text x="50%" y="50%" class="chartLabel3">
-                  <tspan dy="1.2em" x="50%">We'll send you the certificate</tspan>
-                  <tspan dy="1.2em" x="50%">in few minutes.</tspan>
-                  <tspan dy="1.2em" x="50%">Check your email (including</tspan>
-                  <tspan dy="1.2em" x="50%">promotions / spam folder)</tspan>
-                  <!--We'll send you the certificate in few minutes. Check your email (including promotions / spam folder)-->
-                </text>
-              </g>
-            </svg>
-          </div>
-
-          <div id="wrongAnswers">
-            <h2 class="resultLabelTitle alignRight">Wrong</h2>
-            <h2 class="resultLabelPercentage alignRight">50%</h2>
-            <p class="resultLabelFraction alignRight">5/10 questions</p>
-          </div>
+    <!--titolo-->
+    <div id="containerResults">
+      <h1>Results</h1>
+      <h3>The summary of your answers:</h3>
+      <div id="graficoRisposte"></div>
+      <div id="mainResult">
+        <div id="correctAnswers">
+          <h2 class="resultLabelTitle">Correct</h2>
+          <h2 class="resultLabelPercentage">50%</h2>
+          <p class="resultLabelFraction"></p>
         </div>
-        <div id="containerButtonFB">
-          <button class="buttonRate" role="button">RATE US</button>
+        <div class="chart-container">
+          <!-- <canvas class="my-chart"></canvas> -->
+
+          <svg width="100%" height="100%" viewBox="0 0 42 42" class="donut">
+            <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="transparent"></circle>
+            <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#00FFFF"
+              stroke-width="6"></circle>
+
+            <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#C70091"
+              stroke-width="6" stroke-dashoffset="25"></circle>
+            <g class="chartText">
+              <text x="50%" y="50%" class="chartLabel">Congratulations!</text>
+              <text x="50%" y="50%" class="chartLabel2">You Passed the exam.</text>
+              <text x="50%" y="50%" class="chartLabel3">
+                <tspan dy="1.2em" x="50%">We'll send you the certificate</tspan>
+                <tspan dy="1.2em" x="50%">in few minutes.</tspan>
+                <tspan dy="1.2em" x="50%">Check your email (including</tspan>
+                <tspan dy="1.2em" x="50%">promotions / spam folder)</tspan>
+                <!--We'll send you the certificate in few minutes. Check your email (including promotions / spam folder)-->
+              </text>
+            </g>
+          </svg>
+        </div>
+
+        <div id="wrongAnswers">
+          <h2 class="resultLabelTitle alignRight">Wrong</h2>
+          <h2 class="resultLabelPercentage alignRight">50%</h2>
+          <p class="resultLabelFraction alignRight">5/10 questions</p>
         </div>
       </div>
+      <div id="containerButtonFB">
+        <button class="buttonRate" role="button">RATE US</button>
+      </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./assets/JS/result.js"></script>
-  </body>
+    <div class="social-menu">
+      <ul>
+        <li><a href="https://www.facebook.com/epicode/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li><a href="https://www.instagram.com/epicode.official/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://www.youtube.com/c/EPICODEitalia" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+        <li><a href="https://www.linkedin.com/school/epicodeitalia/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./assets/JS/result.js"></script>
+</body>
+
 </html>
