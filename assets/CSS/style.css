@@ -286,14 +286,15 @@ ul {
   background-color: rgba(165, 165, 165, 0.315);
   border-width: 3px;
   border-color: white;
+  border-bottom-style: hidden;
   color: white;
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: large;
-  padding: 3vh;
+  padding: 2vh;
   border-radius: 10vh;
   flex: 1 1 40%;
-  max-width: 40%;
+  max-width: 35%;
   margin: 5px;
 }
 
@@ -305,4 +306,5 @@ ul {
   color: #c70091;
   font-family: "Inter", sans-serif;
   font-weight: 500;
+  font-size: large;
 }
