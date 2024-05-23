@@ -308,8 +308,9 @@ label {
 .btnRisposta {
   background-color: rgba(165, 165, 165, 0.315);
   border-width: 3px;
-  border-color: white;
-  border-bottom-style: hidden;
+  border-color: rgba(255, 255, 255, 0.904);
+  border-left: #ffffff;
+  border-right: hidden;
   color: white;
   font-family: "Inter", sans-serif;
   font-weight: 500;
@@ -322,10 +323,28 @@ label {
 }
 
 .btnColoreViola:hover {
-  background-color: #c70091;
+  background: rgb(92, 0, 66);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(92, 0, 66, 0.9669117647058824) 0%,
+    rgba(233, 0, 157, 0.9332983193277311) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(92, 0, 66, 0.9669117647058824) 0%,
+    rgba(233, 0, 157, 0.9332983193277311) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(92, 0, 66, 0.9669117647058824) 0%,
+    rgba(233, 0, 157, 0.9332983193277311) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5c0042",endColorstr="#e9009d",GradientType=1);
   border-width: 3px;
   border-color: white;
-  border-bottom-style: hidden;
+  border-bottom-color: #ff00b8;
+  border-right: #ff00b8;
+  border-left: #ff00b8;
   color: white;
   font-family: "Inter", sans-serif;
   font-weight: 500;
@@ -338,7 +357,23 @@ label {
 }
 
 #btnVerde {
-  background-color: lightgreen;
+  background: rgb(75, 252, 75);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(75, 252, 75, 0.891281512605042) 0%,
+    rgba(0, 89, 0, 0.8352591036414566) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(75, 252, 75, 0.891281512605042) 0%,
+    rgba(0, 89, 0, 0.8352591036414566) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(75, 252, 75, 0.891281512605042) 0%,
+    rgba(0, 89, 0, 0.8352591036414566) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4bfc4b",endColorstr="#005900",GradientType=1);
   border-width: 3px;
   border-color: white;
   border-bottom-style: hidden;
@@ -354,7 +389,23 @@ label {
 }
 
 #btnRosso {
-  background-color: red;
+  background: rgb(255, 7, 28);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(255, 7, 28, 1) 0%,
+    rgba(89, 0, 3, 0.8184523809523809) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(255, 7, 28, 1) 0%,
+    rgba(89, 0, 3, 0.8184523809523809) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(255, 7, 28, 1) 0%,
+    rgba(89, 0, 3, 0.8184523809523809) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff071c",endColorstr="#590003",GradientType=1);
   border-width: 3px;
   border-color: white;
   border-bottom-style: hidden;
