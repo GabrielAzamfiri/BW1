@@ -1,4 +1,4 @@
-/* *****************************style per tutte le pagine***************************************** */
+/* *********************************************************style per tutte le pagine******************************************************************************************* */
 
 body {
   height: 100%;
@@ -8,7 +8,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 .logo {
   width: 10em;
   margin-top: 3em;
@@ -21,7 +20,7 @@ body {
   margin: auto;
 }
 
-/* ***********************************WELCOME PAGE*********************************************************** */
+/* *******************************************************************WELCOME PAGE************************************************************************************************************************ */
 
 .titoloWP {
   font-family: "Outfit", sans-serif;
@@ -124,7 +123,7 @@ label {
   align-items: center;
 }
 #checkboxWP {
-  display: none;
+  /* display: none; */
 }
 
 #sectionCheckboxWP {
@@ -136,7 +135,7 @@ label {
   margin-left: 10rem;
 }
 
-/* *********************************************STYLE BOTTONI DI TUTTE LE PAGINE***************************** */
+/* *****************************************************************STYLE BOTTONI DI TUTTE LE PAGINE*********************************************************************************************** */
 
 .styleButton,
 .buttonRate:hover,
@@ -172,7 +171,7 @@ label {
   cursor: not-allowed;
 }
 
-/* ***********************************QUESTION PAGE*********************************************** */
+/* **************************************************************QUESTION PAGE**************************************************************************************************************************** */
 
 /* ***************************************TIMER****************************************************** */
 
@@ -293,6 +292,65 @@ label {
 .answerBenchmark {
   font-size: 16px;
 }
+/*** QUESTION CSS ***/
+.numeroDomanda {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  margin-top: 15%;
+}
+
+/*** BOTTONI QUESTION PAGE ***/
+
+#contenitoreRisposte {
+  margin-top: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btnRisposta {
+  background-color: rgba(165, 165, 165, 0.315);
+  border-width: 3px;
+  border-color: white;
+  border-bottom-style: hidden;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: large;
+  padding: 2vh;
+  border-radius: 10vh;
+  flex: 1 1 40%;
+  max-width: 35%;
+  margin: 5px;
+}
+
+.btnColoreViola {
+  background-color: #c70091;
+  border-width: 3px;
+  border-color: white;
+  border-bottom-style: hidden;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: large;
+  padding: 2vh;
+  border-radius: 10vh;
+  flex: 1 1 40%;
+  max-width: 35%;
+  margin: 5px;
+}
+
+.differentColor {
+  color: #c70091;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: large;
+}
+
+/* ************************************************************************************RESULTS PAGE***************************************************************************************************** */
+
 .logoResults {
   width: 10em;
   margin-top: 3em;
@@ -301,8 +359,6 @@ label {
 #containerResults {
   text-align: center;
 }
-
-/* ***************************************RESULTS PAGE******************************************************** */
 
 #containerResults h1,
 #containerResults h3,
@@ -423,7 +479,7 @@ label {
 .buttonRate {
   cursor: pointer;
 }
-/* ************************************FEEDBACK PAGE***************************************************** */
+/* ************************************************************************FEEDBACK PAGE********************************************************************************************************** */
 
 .textFB {
   text-align: center;
@@ -520,4 +576,4 @@ label {
   line-height: 3.5rem;
   text-decoration: none;
 }
-/* ******************************************************************************************* */
+/* ********************************************************************************************************************************************************************* */
