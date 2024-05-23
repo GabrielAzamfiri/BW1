@@ -146,10 +146,10 @@ const questionResults = () => {
 
         setTimeout(() => {
           // imposto il ritardo 0.3 secondi prima di passare alla domanda successiva
-          contenitoreRisposte.innerHTML = ""; // Pulisci il contenitore delle risposte
-          questionResults(); //al click fai ripartire la funzione con i incrementato di 1
+          contenitoreRisposte.innerHTML = ""; // Pulisco il contenitore delle risposte
+          questionResults(); //al click faccio ripartire la funzione con i incrementato di 1
           tempoRimanente = 61;
-          aggiornamentoCountdown(); // al click fai rimaritre il timmer
+          aggiornamentoCountdown(); // al click faccio ripartire il timmer
         }, 300);
       });
     }
