@@ -33,6 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     ratingElement.appendChild(starElement);
     }
+
+  
+  
     
     //seleziono i path creati all'interno della section #ratingStars
     const starsElements = document.querySelectorAll('#ratingStars path');
@@ -44,18 +47,21 @@ document.addEventListener('DOMContentLoaded', function () {
             handleMouseOver(starsElements, index);
         }); // questa funzione viene chiamata quando il mouse passa sopra una stella si colorano tutte le stelle fino a quella selezionata
         
-        star.addEventListener('mouseout', handleMouseOut(starsElements));// questa funzione viene chiamata quando il mouse esce da una stella e ripristina il colore delle stelle di default
+       star.addEventListener('mouseout', function() {
+            handleMouseOut(starsElements);
+       });
+        // questa funzione viene chiamata quando il mouse esce da una stella e ripristina il colore delle stelle di default
         star.addEventListener('click', function() {
             handleClick(starsElements, index);
         }); // questa funzione viene chiamata quando una stella viene cliccata e si aggiorna lo stat
     });
 
-
     
+
 });
 
 function updateStars(stelle, index, className) { // dichiaro la funzione. stelle, index e className sono gli argomenti della funzione
-    stelle.forEach(function(stella, i) {
+    stelle.forEach(function (stella, i) {
         if (i <= index) {
             stella.classList.add(className);
         } else {
@@ -64,29 +70,58 @@ function updateStars(stelle, index, className) { // dichiaro la funzione. stelle
     });
 
     if (className === 'selected') {
-        stelle.forEach(function(stella, i) {
+        stelle.forEach(function (stella, i) {
             if (i > index) {
                 stella.classList.remove('selected');
             }
         });
     }
-}
+
+} 
+
 
 let selectedRating = 0; //0 perchè inizialmente nessuna stella è selezionata. è fuori dal DOM perchè viene utilizzato in handleClick e handleMouseOut
+
+
+function updateButtonState() {
+    const buttonSendFeedback = document.getElementById("buttonFB");
+
+   
+    buttonSendFeedback.classList.remove("buttonFBSelected", "buttonFB");
+
+    if (selectedRating > 0) {
+        buttonSendFeedback.classList.add("buttonFBSelected");
+        buttonSendFeedback.disabled = false;
+    } else {
+        buttonSendFeedback.classList.add("buttonFB");
+        buttonSendFeedback.disabled = true;
+    }
+            
+}
     
+
 // Funzioni eventi che dichiaro. 
 function handleMouseOver(starsElements, index) {
     updateStars(starsElements, index, 'hover');
 }
 
 function handleMouseOut(starsElements) {
-    updateStars(starsElements, selectedRating - 1, 'hover');
+    if (selectedRating === 0) {
+        starsElements.forEach(function (stella) {
+            stella.classList.remove('hover');
+        });
+    } else {
+        updateStars(starsElements, selectedRating - 1, 'hover');
+    }
 }
+
 
 function handleClick(starsElements, index) {
     selectedRating = index + 1;
-    updateStars(starsElements, index, 'selected'); //starsElements, index e selected sono i parametri
-}
+    updateStars(starsElements, index, 'selected');
+    updateButtonState();
+} //starsElements, index e selected sono i parametri
+
 
 
 
@@ -103,7 +138,7 @@ buttonSend.addEventListener('click', function () {
     const resElement = document.getElementById("resFeedback"); // è l'id del div che contiene p e a appena citati
 
     if (feedbackElement && moreInfoElement) { // dichiaro che se esistono già feedbackElement e moreInfoElement allora chiama la funzione setTextResultFeedback 
-      
+    
         setTextResultFeedback(selectedRating, feedbackElement);
 
         // se invece non esistono, dichiaro che vengano creati nuovi elementi "p e "a" con i rispettivi id "feedbackId" e "moreInfoId". associo all'elemento "moreInfoElement" un link e il testo "MORE INFO". questi elementi vengono poi aggiunti al div con id "resFeedback"
@@ -126,7 +161,6 @@ buttonSend.addEventListener('click', function () {
 
     const disappearingDiv = document.getElementById("disappearAfterReview");
     disappearingDiv.style.display = "none"
-
 });
 
 
@@ -137,12 +171,9 @@ function setTextResultFeedback(selectedRating, feedbackElement) {
     }
     else if (selectedRating >= 6 && selectedRating <= 7) { // da 6 a 7 stelle comprese
         feedbackElement.innerText = "Thank you for your review.";
-     }
-     else if (selectedRating >= 8) { // tutto ciò che non rientra nelle precedenti due condizioni, quindi da 8 stelle in su. se facessi else e basta anche se non seleziono nessuna stella cade in questa condizione e non sarebbe molto "awesome" XD
-    feedbackElement.innerText = "Awesome! Hope to see you soon!";  
+    }
+    else if (selectedRating >= 8) { // tutto ciò che non rientra nelle precedenti due condizioni, quindi da 8 stelle in su. se facessi else e basta anche se non seleziono nessuna stella cade in questa condizione e non sarebbe molto "awesome" XD
+        feedbackElement.innerText = "Awesome! Hope to see you soon!";
     }
 }
-
-
-
 
