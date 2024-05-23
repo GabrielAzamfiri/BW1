@@ -321,8 +321,40 @@ label {
   margin: 5px;
 }
 
-.btnColoreViola {
+.btnColoreViola:hover {
   background-color: #c70091;
+  border-width: 3px;
+  border-color: white;
+  border-bottom-style: hidden;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: large;
+  padding: 2vh;
+  border-radius: 10vh;
+  flex: 1 1 40%;
+  max-width: 35%;
+  margin: 5px;
+}
+
+#btnVerde {
+  background-color: lightgreen;
+  border-width: 3px;
+  border-color: white;
+  border-bottom-style: hidden;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: large;
+  padding: 2vh;
+  border-radius: 10vh;
+  flex: 1 1 40%;
+  max-width: 35%;
+  margin: 5px;
+}
+
+#btnRosso {
+  background-color: red;
   border-width: 3px;
   border-color: white;
   border-bottom-style: hidden;
