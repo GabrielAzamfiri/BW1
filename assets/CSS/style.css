@@ -123,7 +123,7 @@ label {
   align-items: center;
 }
 #checkboxWP {
-  /* display: none; */
+  display: none;
 }
 
 #sectionCheckboxWP {

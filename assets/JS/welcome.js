@@ -61,7 +61,7 @@ button.addEventListener("click", function () {
     main.append(selezionaDifficolta, sectionCheckboxWP, divNewButton);
 
     function newCheck() {
-      button2WP.classList.remove("styleButton", "styleButtonUnchecked");
+      button2WP.classList.remove("styleButtonUnchecked", "styleButton");
 
       if (checkboxEasy.checked) {
         button2WP.classList.add("styleButton");
@@ -71,7 +71,7 @@ button.addEventListener("click", function () {
         button2WP.disabled = true; // se il check box non è abilitato / disabilito button
       }
     }
-    label.addEventListener("click", newCheck);
+    checkboxEasy.addEventListener("click", newCheck);
     button2WP.addEventListener("click", function () {
       if (button2WP.disabled === false) {
         checkboxEasy.checked = false;
