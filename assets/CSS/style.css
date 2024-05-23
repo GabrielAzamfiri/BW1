@@ -278,10 +278,12 @@ label {
   font-optical-sizing: auto;
   font-style: normal;
   color: white;
+  margin-bottom: 8%;
+  margin-top: 5%;
 }
 
 .questionBenchmark {
-  font-size: 60px;
+  font-size: 40px;
 }
 
 .answerBenchmark {
