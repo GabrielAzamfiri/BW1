@@ -1,3 +1,5 @@
+/* *********************************************************style per tutte le pagine******************************************************************************************* */
+
 body {
   height: 100%;
   width: 100%;
@@ -6,7 +8,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 .logo {
   width: 10em;
   margin-top: 3em;
@@ -18,6 +19,8 @@ body {
   height: 100vh;
   margin: auto;
 }
+
+/* *******************************************************************WELCOME PAGE************************************************************************************************************************ */
 
 .titoloWP {
   font-family: "Outfit", sans-serif;
@@ -89,34 +92,55 @@ ul {
   font-weight: 700;
 }
 
+#checkWP {
+  font-weight: 600;
+}
+
 label {
   margin-right: 1rem;
 }
 
 #divCheckbox {
   display: inline-block;
-  border: 1px solid white;
-  width: 1rem;
-  height: 1rem;
-  transform: translateY(20%);
+  border: 2.5px solid white;
+  width: 13px;
+  height: 13px;
+  display: flex;
+  margin-right: 10px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
 }
 
+.fa-check {
+  color: white;
+  font-size: 10px;
+  display: none;
+}
+
+#labelWP {
+  display: flex;
+  align-items: center;
+}
 #checkboxWP {
   display: none;
 }
-#checkWP {
-  font-weight: 600;
-}
+
 #sectionCheckboxWP {
+  display: inline-block;
   margin: 4rem 0;
 }
-
-/************************************************* BUTTON JS ****************************************************************/
 #buttonJs {
   display: inline-block;
   margin-left: 10rem;
 }
-.styleButton {
+
+/* *****************************************************************STYLE BOTTONI DI TUTTE LE PAGINE*********************************************************************************************** */
+
+.styleButton,
+.buttonRate:hover,
+.buttonFB:hover,
+#resFeedback a:hover {
   background-color: #00ffff;
   border-style: none;
   box-sizing: border-box;
@@ -131,65 +155,68 @@ label {
   box-shadow: 1px 1px 20px #00ffff;
 }
 
-.styleButtonUnchecked {
+.styleButtonUnchecked,
+.buttonRate,
+.buttonFB,
+#resFeedback a {
   height: 60px;
+  box-sizing: border-box;
   font-family: "Outfit", sans-serif;
   font-size: 20px;
   font-weight: 700;
   padding: 0 5rem;
-  border: 1px solid white;
+  border: 2.5px solid white;
   background-color: transparent;
   color: rgb(248, 242, 242);
   cursor: not-allowed;
 }
-/* ***************************************TIMER*********************************** */
+
+/* **************************************************************QUESTION PAGE**************************************************************************************************************************** */
+
+/* ***************************************TIMER****************************************************** */
+
 #time {
-  position: absolute; /* consente di posizionarlo esattamente dentro l'elemento padre */
-  /*  top e left servono per modificare la posizione dei bordi superiori e sinistro in modo da centratli al centro */
-  top: 20%;
+  position: absolute;
+  top: 12.5%;
   left: 80%;
-  /* con la propietà trasform: traslate andiamo a centrare il contenuto giocando sull'asse orizontale e verticale, in questo caso a meta della sua larghezza e altezza. */
   transform: translate(-50%, -50%);
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
 }
 
 /* Stile dei cerchi */
 #time .circle {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
 }
 
 #time .circle svg {
   position: absolute;
   top: 0;
   left: 0;
-  width: 150px;
-  height: 150px;
-  transform: rotate(270deg);
+  width: 100px;
+  height: 100px;
+  transform: rotate(-90deg); /* Rotazione corretta */
 }
 
 #time .circle svg circle {
   width: 100%;
   height: 100%;
   fill: transparent;
-  stroke-width: 8;
-  transform: translate(5px, 5px);
+  stroke-width: 10;
+  transform: translate(0, 0); /* Centra il cerchio */
 }
 
 #time .circle svg circle.bg {
-  /* Colore di background */
-  stroke: #00ffff;
+  stroke: #00ffff; /* Colore di background */
 }
 
 #time .circle svg circle#progress {
-  /* Colore del cerchio animato */
-  stroke: #e0e0e0;
-  stroke-dasharray: 440;
-  stroke-dashoffset: 440;
-  /* Aggiungo transizione */
-  transition: stroke-dashoffset 1s linear;
+  stroke: #996a9d; /* Colore del cerchio animato */
+  stroke-dasharray: 282.74;
+  stroke-dashoffset: 282.74;
+  transition: stroke-dashoffset 1s linear; /* Aggiungo transizione */
 }
 
 /* Testo timer */
@@ -200,24 +227,25 @@ label {
   transform: translate(-50%, -50%);
   color: white;
   font-weight: 500;
-  font-size: 2em;
+  font-size: 2.5em;
   text-align: center;
 }
 
-#time .seconds .span {
-  font-size: 0.3em;
+.span {
+  font-size: 0.18em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 3px;
-}
-
-#time .seconds #timerSeconds {
-  font-size: 1.8em;
+  display: block;
   margin: 0;
 }
 
-/* Puntino nel cerchio */
-#time .dots {
+#time .seconds #timerSeconds {
+  font-size: 1em;
+  margin: 0;
+}
+
+/* Puntino nel cerchio da ritoccare dopo se avamza tempo!!! */
+/* #time .dots {
   position: absolute;
   top: 0;
   left: 0;
@@ -225,20 +253,20 @@ label {
   height: 100%;
   border-radius: 50%;
   transform-origin: center;
-}
+} */
 
-#time .dots::before {
+/* #time .dots::before {
   content: "";
   position: absolute;
-  top: -3px;
+  top: -2px;
   left: 50%;
   transform: translateX(-50%);
-  width: 15px;
-  height: 15px;
-  background: var(--crl);
+  width: 10px;
+  height: 10px;
+  background: #996A9D;
   border-radius: 50%;
-  box-shadow: 0 0 20px var(--crl), 0 0 60px var(--crl);
-}
+  box-shadow: 0 0 10px var(--crl), 0 0 30px var(--crl);
+} */
 
 .containerQuestion {
   text-align: center;
@@ -259,7 +287,70 @@ label {
 .answerBenchmark {
   font-size: 16px;
 }
+/*** QUESTION CSS ***/
+.numeroDomanda {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  margin-top: 15%;
+}
 
+/*** BOTTONI QUESTION PAGE ***/
+
+#contenitoreRisposte {
+  margin-top: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btnRisposta {
+  background-color: rgba(165, 165, 165, 0.315);
+  border-width: 3px;
+  border-color: white;
+  border-bottom-style: hidden;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: large;
+  padding: 2vh;
+  border-radius: 10vh;
+  flex: 1 1 40%;
+  max-width: 35%;
+  margin: 5px;
+}
+
+.btnColoreViola {
+  background-color: #c70091;
+  border-width: 3px;
+  border-color: white;
+  border-bottom-style: hidden;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: large;
+  padding: 2vh;
+  border-radius: 10vh;
+  flex: 1 1 40%;
+  max-width: 35%;
+  margin: 5px;
+}
+
+.differentColor {
+  color: #c70091;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: large;
+}
+
+/* ************************************************************************************RESULTS PAGE***************************************************************************************************** */
+
+.logoResults {
+  width: 10em;
+  margin-top: 3em;
+  padding-bottom: 2.5em;
+}
 #containerResults {
   text-align: center;
 }
@@ -285,25 +376,104 @@ label {
 #containerResults h3 {
   font-size: 30px;
 }
+.chart-container {
+  width: 38%;
+}
 
-.buttonFB {
-  background-color: transparent;
-  border-style: none;
-  box-sizing: border-box;
-  border: 2px solid white;
-  cursor: pointer;
-  display: inline-block;
+.donut {
+  color: white;
+}
+
+.chartText {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  color: white;
-  font-weight: 600;
-  height: 50px;
-  line-height: 20px;
-  text-align: center;
-  width: 170px;
-  font-size: 16px;
+
+  font-size: 0.3em;
+  -moz-transform: translateY(0.25em);
+  -ms-transform: translateY(0.25em);
+  -webkit-transform: translateY(0.25em);
+  transform: translateY(0.25em);
 }
+
+.chartLabel {
+  font-size: 0.45em;
+  font-weight: 700;
+  fill: white;
+  line-height: 1;
+  text-anchor: middle;
+  -moz-transform: translateY(-3.6em);
+  -ms-transform: translateY(-3.6em);
+  -webkit-transform: translateY(-3.6em);
+  transform: translateY(-3.6em);
+}
+
+.chartLabel2 {
+  font-size: 0.45em;
+  font-weight: 700;
+  line-height: 1;
+  fill: #00ffff;
+  text-anchor: middle;
+  -moz-transform: translateY(-2.4em);
+  -ms-transform: translateY(-2.4em);
+  -webkit-transform: translateY(-2.4em);
+  transform: translateY(-2.4em);
+}
+.chartLabel3 {
+  font-size: 0.3em;
+  font-family: "Inter", sans-serif;
+  fill: white;
+  font-weight: 200;
+  text-anchor: middle;
+  -moz-transform: translateY(-1.2em);
+  -ms-transform: translateY(-1.2em);
+  -webkit-transform: translateY(-1.2em);
+  transform: translateY(-1.2em);
+}
+
+#mainResult {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+
+#correctAnswers,
+#wrongAnswers {
+  padding-top: 15vh;
+  width: 30%;
+}
+
+.resultLabelTitle,
+.resultLabelPercentage,
+.resultLabelFraction {
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 4.8rem;
+  text-align: left;
+}
+.resultLabelPercentage {
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.resultLabelFraction {
+  font-size: 1.5rem;
+  font-weight: 200;
+  text-align: left;
+}
+.alignRight {
+  text-align: right;
+}
+#containerButtonFB {
+  margin-top: 2rem;
+}
+.buttonRate {
+  cursor: pointer;
+}
+/* ************************************************************************FEEDBACK PAGE********************************************************************************************************** */
 
 .textFB {
   text-align: center;
@@ -313,6 +483,15 @@ label {
   font-weight: 300;
 }
 
+#textFB {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 4em;
+}
 #ratingStars {
   text-align: center;
   padding-top: 40px;
@@ -329,16 +508,6 @@ label {
 
 .stella {
   margin-right: 10px;
-}
-
-#textFB {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  padding-top: 4em;
 }
 
 #containerBox,
@@ -362,21 +531,12 @@ label {
 }
 
 .buttonFB {
-  background-color: #00ffff;
-  border-style: none;
-  box-sizing: border-box;
-  color: black;
+  margin: 60px 0;
+  padding: 0 2rem;
   cursor: pointer;
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-size: 16px;
-  font-weight: 700;
-  height: 40px;
-  outline: none;
-  text-align: center;
-  box-shadow: 1px 1px 20px #00ffff;
-  margin-top: 60px;
+}
+.buttonFB:hover {
+  padding: 0 2rem;
 }
 
 #resFeedback {
@@ -387,37 +547,27 @@ label {
   color: white;
   font-size: 20px;
   text-align: center;
-  margin-top: 9em;
+  margin-top: 7em;
 }
-
-#resFeedback a {
-  display: inline-block;
-  margin-top: 40px;
-  background-color: #00ffff;
-  border-style: none;
-  box-sizing: border-box;
-  color: black;
-  cursor: pointer;
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-weight: 700;
-  height: 40px;
-  width: 170px;
-  outline: none;
-  text-align: center;
-  box-shadow: 1px 1px 20px #00ffff;
-  text-align: unset;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 16px;
-}
-
 #feedbackId {
   font-size: 35px;
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 700;
-  padding-bottom: 3em;
 }
+#resFeedback a {
+  display: inline-block;
+  margin-top: 12em;
+  text-align: unset;
+  line-height: 3.2rem;
+  text-decoration: none;
+}
+#resFeedback a:hover {
+  display: inline-block;
+  margin-top: 12em;
+  text-align: unset;
+  line-height: 3.5rem;
+  text-decoration: none;
+}
+/* ********************************************************************************************************************************************************************* */

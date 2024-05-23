@@ -90,7 +90,11 @@ const questionResults = () => {
     const risposte = questions[i].correct_answer.concat("," + questions[i].incorrect_answers).split(","); // array di risposte
 
     const questionNumber = document.getElementById("questionNumber");
-    questionNumber.innerText = `QUESTION ${i + 1}/10`; //aggiorno il conteggio delle domande
+    questionNumber.innerHTML = `QUESTION ${
+      //aggiorno il conteggio delle domande
+      i + 1
+    }<span class="differentColor"> / 10</span>`; // aggiungo uno span in js per il cambio colore del numero domanda
+
     domanda.innerText = questions[i].question; //cambio il testo della domanda
     const numeriRandom = []; // array di numeri random da 0 al numero di risposte ( serve per mettere le riposte in ordine casuale)
 
@@ -109,6 +113,9 @@ const questionResults = () => {
       contenitoreRisposte.appendChild(risposta);
 
       risposta.addEventListener("click", () => {
+        // al click della risposta, se corretta aggiungi 1 al risultato altrimenti niente
+        risposta.classList.remove("btnRisposta");
+        risposta.classList.add("btnColoreViola");
         if (risposta.innerText === questions[i].correct_answer) {
           console.log("risposta giusta");
           // al click della risposta, se corretta aggiungi 1 al risultato altrimenti niente
@@ -118,10 +125,14 @@ const questionResults = () => {
           console.log("risposta sbagliata");
         }
         i += 1;
-        tempoRimanente = 10;
-        contenitoreRisposte.innerHTML = "";
-        questionResults(); //al click fai ripartire la funzione con i incrementato di 1
-        aggiornamentoCountdown(); // al click fai rimaritre il timmer
+
+        setTimeout(() => {
+          // imposto il ritardo 0.3 secondi prima di passare alla domanda successiva
+          contenitoreRisposte.innerHTML = ""; // Pulisci il contenitore delle risposte
+          questionResults(); //al click fai ripartire la funzione con i incrementato di 1
+          tempoRimanente = 61;
+          aggiornamentoCountdown(); // al click fai rimaritre il timmer
+        }, 300);
       });
     }
   } else {
@@ -142,11 +153,11 @@ let progressCircle = document.getElementById("progress");
 let secDot = document.querySelector(".secDot");
 
 /* Funzione per il timer */
-let tempoRimanente = 10;
+let tempoRimanente = 60;
 const countdownElement = document.getElementById("timerSeconds");
 
 /* Imposto lo strokeDasharray per il cerchio */
-const lunghezzaCirconferenza = 440; // Circonferenza del cerchio
+const lunghezzaCirconferenza = 282.74; // Circonferenza del cerchio
 progressCircle.style.strokeDasharray = lunghezzaCirconferenza;
 progressCircle.style.strokeDashoffset = lunghezzaCirconferenza;
 
@@ -157,18 +168,23 @@ function aggiornamentoCountdown() {
   /* Aggiorna il tempo */
   countdownElement.textContent = tempoRimanente;
 
+  /* Calcolo lo strokeDasharray in base al tempo rimanente */
+  let percentualeCompletamento = (60 - tempoRimanente) / 60;
+  let lunghezzaVisibile = lunghezzaCirconferenza * percentualeCompletamento;
+  let lunghezzaInvisibile = lunghezzaCirconferenza - lunghezzaVisibile;
+  progressCircle.style.strokeDasharray = `${lunghezzaVisibile} ${lunghezzaInvisibile}`;
   /* Calcolo lo strokeDashoffset in base al tempo rimanente */
-  let percentualeCompletamento = tempoRimanente / 10;
+  /*   let percentualeCompletamento = tempoRimanente / 60;
   let strokeDashoffset = lunghezzaCirconferenza * percentualeCompletamento;
-  progressCircle.style.strokeDashoffset = strokeDashoffset;
+  progressCircle.style.strokeDashoffset = strokeDashoffset; */
 
-  /* Calcola l'angolo di rotazione per il puntino */
-  let angoloRotazione = (10 - tempoRimanente) * 6;
-  secDot.style.transform = `rotate(${angoloRotazione}deg)`;
+  /* Calcola l'angolo di rotazione per il puntino */ /* DA FARE SE AVANZA TEMPO */
+  /*  let angoloRotazione = (60 - tempoRimanente) * 6;
+  secDot.style.transform = `rotate(${angoloRotazione}deg)`; */
 
   /* Se scade il tempo */
   if (tempoRimanente <= 0) {
-    tempoRimanente = 10;
+    tempoRimanente = 61;
     i += 1;
     const contenitoreRisposte = document.getElementById("contenitoreRisposte");
     contenitoreRisposte.innerHTML = "";
