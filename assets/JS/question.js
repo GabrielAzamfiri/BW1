@@ -5,18 +5,13 @@ const questionsEasy = [
     difficulty: "easy",
     question: "What does CPU stand for?",
     correct_answer: "Central Processing Unit",
-    incorrect_answers: [
-      "Central Process Unit",
-      "Computer Personal Unit",
-      "Central Processor Unit",
-    ],
+    incorrect_answers: ["Central Process Unit", "Computer Personal Unit", "Central Processor Unit"],
   },
   {
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
+    question: "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
     correct_answer: "Final",
     incorrect_answers: ["Static", "Private", "Public"],
   },
@@ -32,8 +27,7 @@ const questionsEasy = [
     category: "Science: Computers",
     type: "boolean",
     difficulty: "easy",
-    question:
-      "Pointers were not used in the original C programming language; they were added later on in C++.",
+    question: "Pointers were not used in the original C programming language; they were added later on in C++.",
     correct_answer: "False",
     incorrect_answers: ["True"],
   },
@@ -41,8 +35,7 @@ const questionsEasy = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "What is the most preferred image format used for logos in the Wikimedia database?",
+    question: "What is the most preferred image format used for logos in the Wikimedia database?",
     correct_answer: ".svg",
     incorrect_answers: [".png", ".jpeg", ".gif"],
   },
@@ -52,18 +45,13 @@ const questionsEasy = [
     difficulty: "easy",
     question: "In web design, what does CSS stand for?",
     correct_answer: "Cascading Style Sheet",
-    incorrect_answers: [
-      "Counter Strike: Source",
-      "Corrective Style Sheet",
-      "Computer Style Sheet",
-    ],
+    incorrect_answers: ["Counter Strike: Source", "Corrective Style Sheet", "Computer Style Sheet"],
   },
   {
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "What is the code name for the mobile operating system Android 7.0?",
+    question: "What is the code name for the mobile operating system Android 7.0?",
     correct_answer: "Nougat",
     incorrect_answers: ["Ice Cream Sandwich", "Jelly Bean", "Marshmallow"],
   },
@@ -87,8 +75,7 @@ const questionsEasy = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "easy",
-    question:
-      "Which programming language shares its name with an island in Indonesia?",
+    question: "Which programming language shares its name with an island in Indonesia?",
     correct_answer: "Java",
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
@@ -106,8 +93,7 @@ const questionsMedium = [
     type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
-    question:
-      "Which of the following is a personal computer made by the Japanese company Fujitsu?",
+    question: "Which of the following is a personal computer made by the Japanese company Fujitsu?",
     correct_answer: "FM-7",
     incorrect_answers: ["PC-9801", "Xmillennium ", "MSX"],
   },
@@ -117,11 +103,7 @@ const questionsMedium = [
     category: "Science: Computers",
     question: "On which day did the World Wide Web go online?",
     correct_answer: "December 20, 1990",
-    incorrect_answers: [
-      "December 17, 1996",
-      "November 12, 1990",
-      "November 24, 1995",
-    ],
+    incorrect_answers: ["December 17, 1996", "November 12, 1990", "November 24, 1995"],
   },
   {
     type: "multiple",
@@ -135,8 +117,7 @@ const questionsMedium = [
     type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
-    question:
-      "In CSS, which of these values CANNOT be used with the &quot;position&quot; property?",
+    question: "In CSS, which of these values CANNOT be used with the &quot;position&quot; property?",
     correct_answer: "center",
     incorrect_answers: ["static", "absolute", "relative"],
   },
@@ -144,8 +125,7 @@ const questionsMedium = [
     type: "boolean",
     difficulty: "medium",
     category: "Science: Computers",
-    question:
-      "All program codes have to be compiled into an executable file in order to be run. This file can then be executed on any machine.",
+    question: "All program codes have to be compiled into an executable file in order to be run. This file can then be executed on any machine.",
     correct_answer: "False",
     incorrect_answers: ["True"],
   },
@@ -153,8 +133,7 @@ const questionsMedium = [
     type: "boolean",
     difficulty: "medium",
     category: "Science: Computers",
-    question:
-      "It&#039;s not possible to format a write-protected DVD-R Hard Disk.",
+    question: "It&#039;s not possible to format a write-protected DVD-R Hard Disk.",
     correct_answer: "True",
     incorrect_answers: ["False"],
   },
@@ -172,18 +151,13 @@ const questionsMedium = [
     category: "Science: Computers",
     question: "What does &quot;LCD&quot; stand for?",
     correct_answer: "Liquid Crystal Display",
-    incorrect_answers: [
-      "Language Control Design",
-      "Last Common Difference",
-      "Long Continuous Design",
-    ],
+    incorrect_answers: ["Language Control Design", "Last Common Difference", "Long Continuous Design"],
   },
   {
     type: "multiple",
     difficulty: "medium",
     category: "Science: Computers",
-    question:
-      "All of the following programs are classified as raster graphics editors EXCEPT:",
+    question: "All of the following programs are classified as raster graphics editors EXCEPT:",
     correct_answer: "Inkscape",
     incorrect_answers: ["Paint.NET", "GIMP", "Adobe Photoshop"],
   },
@@ -195,11 +169,7 @@ const questionHard = [
     category: "Science: Computers",
     question: "What vulnerability ranked #1 on the OWASP Top 10 in 2013?",
     correct_answer: "Injection ",
-    incorrect_answers: [
-      "Broken Authentication",
-      "Cross-Site Scripting",
-      "Insecure Direct Object References",
-    ],
+    incorrect_answers: ["Broken Authentication", "Cross-Site Scripting", "Insecure Direct Object References"],
   },
   {
     type: "multiple",
@@ -207,11 +177,7 @@ const questionHard = [
     category: "Science: Computers",
     question: "Which kind of algorithm is Ron Rivest not famous for creating?",
     correct_answer: "Secret sharing scheme",
-    incorrect_answers: [
-      "Hashing algorithm",
-      "Asymmetric encryption",
-      "Stream cipher",
-    ],
+    incorrect_answers: ["Hashing algorithm", "Asymmetric encryption", "Stream cipher"],
   },
   {
     type: "multiple",
@@ -225,8 +191,7 @@ const questionHard = [
     type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
-    question:
-      "Which of the following computer components can be built using only NAND gates?",
+    question: "Which of the following computer components can be built using only NAND gates?",
     correct_answer: "ALU",
     incorrect_answers: ["CPU", "RAM", "Register"],
   },
@@ -234,8 +199,7 @@ const questionHard = [
     type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
-    question:
-      "What does the International System of Quantities refer 1024 bytes as?",
+    question: "What does the International System of Quantities refer 1024 bytes as?",
     correct_answer: "Kibibyte",
     incorrect_answers: ["Kylobyte", "Kilobyte", "Kelobyte"],
   },
@@ -251,8 +215,7 @@ const questionHard = [
     type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
-    question:
-      "What is the name given to layer 4 of the Open Systems Interconnection (ISO) model?",
+    question: "What is the name given to layer 4 of the Open Systems Interconnection (ISO) model?",
     correct_answer: "Transport",
     incorrect_answers: ["Session", "Data link", "Network"],
   },
@@ -260,8 +223,7 @@ const questionHard = [
     type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
-    question:
-      "The Harvard architecture for micro-controllers added which additional bus?",
+    question: "The Harvard architecture for micro-controllers added which additional bus?",
     correct_answer: "Instruction",
     incorrect_answers: ["Address", "Data", "Control"],
   },
@@ -269,8 +231,7 @@ const questionHard = [
     type: "multiple",
     difficulty: "hard",
     category: "Science: Computers",
-    question:
-      "Which of the following is the oldest of these computers by release date?",
+    question: "Which of the following is the oldest of these computers by release date?",
     correct_answer: "TRS-80",
     incorrect_answers: ["Commodore 64", "ZX Spectrum", "Apple 3"],
   },
@@ -290,9 +251,7 @@ let questionsChoose = questionHard;
 const questionResults = () => {
   const domanda = document.getElementById("domanda");
   if (i < questionsChoose.length) {
-    const risposte = questionsChoose[i].correct_answer
-      .concat("," + questionsChoose[i].incorrect_answers)
-      .split(","); // array di risposte
+    const risposte = questionsChoose[i].correct_answer.concat("," + questionsChoose[i].incorrect_answers).split(","); // array di risposte
 
     const questionNumber = document.getElementById("questionNumber");
     questionNumber.innerHTML = `QUESTION ${
@@ -311,9 +270,7 @@ const questionResults = () => {
       } while (numeriRandom.includes(randomNumber));
       numeriRandom.push(randomNumber);
 
-      const contenitoreRisposte = document.getElementById(
-        "contenitoreRisposte"
-      );
+      const contenitoreRisposte = document.getElementById("contenitoreRisposte");
       const risposta = document.createElement("button");
       risposta.classList.add("btnRisposta");
       risposta.innerText = risposte[numeriRandom[index]]; //come index un numero casuale cosi le riposte sono in ordine casuale
@@ -322,10 +279,9 @@ const questionResults = () => {
 
       risposta.addEventListener("click", () => {
         // al click della risposta, se corretta aggiungi 1 al risultato altrimenti niente
-        risposta.classList.remove("btnRisposta");
-        risposta.classList.add("btnColoreViola");
+
         if (risposta.innerText === questionsChoose[i].correct_answer) {
-          console.log("risposta giusta");
+          risposta.id = "btnVerde";
           // al click della risposta, se corretta aggiungi 1 al risultato altrimenti niente
           risultato += 1;
           console.log("il risultato è:", risultato);
@@ -346,7 +302,7 @@ const questionResults = () => {
           questionResults(); //al click faccio ripartire la funzione con i incrementato di 1
           tempoRimanente = 61;
           aggiornamentoCountdown(); // al click faccio ripartire il timmer
-        }, 800);
+        }, 600);
       });
     }
   } else {
