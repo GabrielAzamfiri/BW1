@@ -25,37 +25,38 @@
     <link rel="stylesheet" href="/assets/CSS/style.css" />
   </head>
 
-  <body class="containerMargin">
-    <div class="add-feedback">
-      <header>
-        <img src="assets/img/epicode_logo.png" alt="logo epicode" class="logo" />
-      </header>
+  <body>
+    <div class="containerMargin">
+      <div class="add-feedback">
+        <header>
+          <img src="assets/img/epicode_logo.png" alt="logo epicode" class="logo" />
+        </header>
 
-      <!--titolo-->
-      <div id="disappearAfterReview">
-        <section>
-          <h1 id="h1Feedback">Tell us how it's going</h1>
-          <div class="textFB">
-            From 0 to 10, how likely are you to recommend EPICODE <br />
-            to a friend or a colleague?
-          </div>
-        </section>
+        <!--titolo-->
+        <div id="disappearAfterReview">
+          <section>
+            <h1 id="h1Feedback">Tell us how it's going</h1>
+            <div class="textFB">
+              From 0 to 10, how likely are you to recommend EPICODE <br />
+              to a friend or a colleague?
+            </div>
+          </section>
 
-        <!--rating-->
-        <section id="sectionRating">
-          <div id="ratingStars"></div>
-          <div id="textFB">Leave us an open feeedback about your experiences so far</div>
-          <div id="containerBox">
-            <input type="text" class="commentFB" placeholder="Write your comment here" />
-          </div>
-          <button id="buttonFB" class="buttonFB" disabled>INVIA FEEDBACK</button>
-        </section>
+          <!--rating-->
+          <section id="sectionRating">
+            <div id="ratingStars"></div>
+            <div id="textFB">Leave us an open feeedback about your experiences so far</div>
+            <div id="containerBox">
+              <input type="text" class="commentFB" placeholder="Write your comment here" />
+            </div>
+            <button id="buttonFB" class="buttonFB" disabled>INVIA FEEDBACK</button>
+          </section>
+        </div>
       </div>
+
+      <div id="resFeedback"></div>
+      <p></p>
     </div>
-
-    <div id="resFeedback"></div>
-    <p></p>
-
     <div class="social-menu">
       <ul>
         <li>
@@ -72,7 +73,6 @@
         </li>
       </ul>
     </div>
-
     <script src="/assets/JS/feedback.js"></script>
   </body>
 </html>

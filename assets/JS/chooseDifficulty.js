@@ -16,12 +16,21 @@ divButton.appendChild(button);
 let difRisposte;
 function check() {
   button.classList.remove("styleButton", "styleButtonUnchecked");
-
+  divCheckboxEasy.style.backgroundColor = "transparent";
+  divCheckboxMedium.style.backgroundColor = "transparent";
+  divCheckboxHard.style.backgroundColor = "transparent";
+  const allCheckboxes = document.querySelectorAll("input[type=checkbox]");
+  allCheckboxes.forEach((checkbox) => {
+    // disabilito tutti i check box(not checked)
+    checkbox.checked = false;
+  });
+  this.checked = true; //solo l'elemento attuale (la checkbox selezionata) diventa checked
   if (checkboxEasy.checked) {
     button.classList.add("styleButton");
     button.disabled = false; //se il check box è spuntato, abilito il bottone
     difRisposte = "Easy";
     divCheckboxEasy.style.backgroundColor = "#00ffff";
+
     console.log(difRisposte);
   } else if (checkboxMedium.checked) {
     button.classList.add("styleButton");
@@ -34,16 +43,17 @@ function check() {
     button.disabled = false; //se il check box è spuntato, abilito il bottone
     difRisposte = "Hard";
     divCheckboxHard.style.backgroundColor = "#00ffff";
-
     console.log(difRisposte);
-  } else {
-    button.classList.add("styleButtonUnchecked");
-    button.disabled = true; // se il check box non è abilitato / disabilito button
-    difRisposte = undefined;
-    divCheckboxEasy.style.backgroundColor = "transparent";
-    divCheckboxMedium.style.backgroundColor = "transparent";
-    divCheckboxHard.style.backgroundColor = "transparent";
   }
+  //non arrriverà mai nel else perche una volta fatto click ci sarà sempre una checkbox selezionata
+  // else {
+  //   button.classList.add("styleButtonUnchecked");
+  //   button.disabled = true; // se il check box non è abilitato / disabilito button
+  //   difRisposte = undefined;
+  //   divCheckboxEasy.style.backgroundColor = "transparent";
+  //   divCheckboxMedium.style.backgroundColor = "transparent";
+  //   divCheckboxHard.style.backgroundColor = "transparent";
+  // }
   localStorage.setItem("difRisposte", difRisposte);
 }
 
