@@ -162,7 +162,7 @@ const questionsMedium = [
     incorrect_answers: ["Paint.NET", "GIMP", "Adobe Photoshop"],
   },
 ];
-const questionHard = [
+const questionsHard = [
   {
     type: "multiple",
     difficulty: "hard",
@@ -247,7 +247,15 @@ const questionHard = [
 //*******************************************************************FUNZIONE DOMANDE*************************************************************************** */
 let i = 0; //per cambiare index array questions al click
 let risultato = 0;
-let questionsChoose = questionHard;
+let questionsChoose;
+let questionsChooseStr = localStorage.getItem("difRisposte");
+if (questionsChooseStr === "Easy") {
+  questionsChoose = questionsEasy;
+} else if (questionsChooseStr === "Medium") {
+  questionsChoose = questionsMedium;
+} else if (questionsChooseStr === "Hard") {
+  questionsChoose = questionsHard;
+}
 const questionResults = () => {
   const domanda = document.getElementById("domanda");
   if (i < questionsChoose.length) {
@@ -367,41 +375,3 @@ function aggiornamentoCountdown() {
 
 /* Impostiamo l'intervallo di aggiornamento del timer */
 const intervalloCountdown = setInterval(aggiornamentoCountdown, 1000);
-
-/* La funzione questionResults() è già stata stabilita da un collega */
-
-/*if (window.location.href.endsWith("Results.html")) {
-    console.log("File reults");
-    console.log(risultato);
-
-    const chartData = {
-      labels: ["Correct", "Wrong"],
-      data:[risultato*10, 100-(risultato*10)]
-      //data: [60, 40],
-    };
-
-    const myChart = document.querySelector(".my-chart");
-
-    new Chart(myChart, {
-      type: "doughnut",
-      data: {
-        labels: chartData.labels,
-        datasets: [
-          {
-            label: "Percentuale",
-            data: chartData.data,
-          },
-        ],
-      },
-      options: {
-        borderWidth: 10,
-        borderRadius: 2,
-        hoverBorderWidth: 0,
-        plugins: {
-          legend: {
-            display: false,
-          },
-        },
-      },
-    });
-  }*/
