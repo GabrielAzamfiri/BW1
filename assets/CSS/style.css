@@ -160,7 +160,9 @@ label {
 }
 
 #divCheckbox,
-.divCheckbox {
+.divCheckboxEasy,
+.divCheckboxMedium,
+.divCheckboxHard {
   display: inline-block;
   border: 2.5px solid white;
   width: 13px;
