@@ -245,6 +245,8 @@ const questionsHard = [
   },
 ];
 //*******************************************************************FUNZIONE DOMANDE*************************************************************************** */
+let tempoTotale; // del timmer che viene scelto dallo switch case
+
 let i = 0; //per cambiare index array questions al click
 let risultato = 0;
 let questionsChoose;
@@ -308,7 +310,7 @@ const questionResults = () => {
           // imposto il ritardo 0.3 secondi prima di passare alla domanda successiva
           contenitoreRisposte.innerHTML = ""; // Pulisco il contenitore delle risposte
           questionResults(); //al click faccio ripartire la funzione con i incrementato di 1
-          tempoRimanente = 61;
+          tempoRimanente = tempoTotale;
           aggiornamentoCountdown(); // al click faccio ripartire il timmer
         }, 600);
       });
@@ -323,6 +325,7 @@ window.onload = function () {
   //FAI PARTIRE LA FUNZIONE QUANDO LA PAGINA è CARICATA
   if (window.location.href.endsWith("Question.html")) {
     questionResults(); //chiamo la funzione cosi quando carica la pagina la prima domanda è gia pronta
+    aggiornamentoCountdown();
   }
 };
 //**********************************************************************TIMER************************************************************/
@@ -331,7 +334,20 @@ let progressCircle = document.getElementById("progress");
 let secDot = document.querySelector(".secDot");
 
 /* Funzione per il timer */
-let tempoTotale = 60;
+switch (questionsChoose) {
+  case questionsEasy:
+    tempoTotale = 41;
+    break;
+  case questionsMedium:
+    tempoTotale = 61;
+    break;
+  case questionsHard:
+    tempoTotale = 121;
+    break;
+  default:
+    tempoTotale = 61;
+    break;
+}
 let tempoRimanente = tempoTotale;
 const countdownElement = document.getElementById("timerSeconds");
 
@@ -363,7 +379,7 @@ function aggiornamentoCountdown() {
 
   /* Se scade il tempo */
   if (tempoRimanente <= 0) {
-    tempoRimanente = 61;
+    tempoRimanente = tempoTotale;
     i += 1;
     const contenitoreRisposte = document.getElementById("contenitoreRisposte");
     contenitoreRisposte.innerHTML = "";
@@ -374,4 +390,4 @@ function aggiornamentoCountdown() {
 }
 
 /* Impostiamo l'intervallo di aggiornamento del timer */
-const intervalloCountdown = setInterval(aggiornamentoCountdown, 1000);
+setInterval(aggiornamentoCountdown, 1000);
